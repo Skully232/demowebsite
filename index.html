@@ -141,10 +141,10 @@
   <!-- NAVBAR -->
   <nav id="navbar" class="fixed top-0 left-0 w-full z-[1000] py-4 px-6 md:px-12 transition-all duration-300 flex items-center justify-between">
     <div class="flex items-center gap-3">
-      <!-- Small Logo Badge -->
+      <!-- Small Logo Badge with Sardar Mascot -->
       <a href="#hero" class="flex items-center gap-3 group">
-        <div class="w-12 h-12 rounded-full bg-cream border-2 border-saffron flex items-center justify-center shadow-md transform group-hover:rotate-[360deg] transition-transform duration-700">
-          <span class="text-charcoal font-bold text-xl font-hindi leading-none">KC</span>
+        <div class="w-12 h-12 rounded-full bg-white border-2 border-saffron overflow-hidden shadow-md transform group-hover:rotate-[360deg] transition-transform duration-700 flex items-center justify-center">
+          <img src="Gemini_Generated_Image_dphcpodphcpodphc.png" class="w-full h-full object-cover" alt="Kapoor's Cafe Logo">
         </div>
         <span class="text-cream font-bold text-xl md:text-2xl tracking-wide hidden sm:block">Kapoor's Cafe</span>
       </a>
@@ -206,12 +206,10 @@
 
     <!-- Hero Main Layer -->
     <div class="relative z-10 flex flex-col items-center justify-center text-center px-6 max-w-5xl mx-auto mt-8">
-      <!-- Logo Badge -->
-      <div id="hero-badge" class="w-72 h-72 sm:w-80 sm:h-80 md:w-[320px] md:h-[320px] rounded-full bg-cream border-[10px] border-saffron flex items-center justify-center shadow-2xl mb-8 transform -rotate-[5deg] hover:rotate-0 transition-transform duration-500 cursor-pointer">
-        <div class="flex flex-col items-center">
-          <span class="text-charcoal font-bold text-7xl sm:text-8xl md:text-9xl tracking-tight leading-none">KC</span>
-          <span class="text-saffron font-bold text-sm tracking-[0.25em] uppercase mt-2">Est. June 2014</span>
-        </div>
+      <!-- Logo Badge with Official Sardar Mascot Logo (UPGRADE - Embedded Image) -->
+      <div id="hero-badge" class="w-72 h-72 sm:w-80 sm:h-80 md:w-[320px] md:h-[320px] rounded-full bg-white border-[10px] border-saffron flex flex-col items-center justify-center shadow-2xl mb-8 transform -rotate-[5deg] hover:rotate-0 transition-transform duration-500 cursor-pointer overflow-hidden relative">
+        <img src="Gemini_Generated_Image_dphcpodphcpodphc.png" class="w-[85%] h-[85%] object-contain mt-2" alt="Kapoor's Cafe Official Mascot Logo">
+        <span class="text-saffron font-extrabold text-xs sm:text-sm tracking-[0.2em] uppercase absolute bottom-4">Est. June 2014</span>
       </div>
 
       <h1 id="hero-title" class="text-cream text-5xl sm:text-6xl md:text-8xl font-black drop-shadow-[4px_4px_0px_#C0392B] mb-4">
@@ -264,20 +262,10 @@
   <!-- SECTION 2: OUR STORY (id="story") -->
   <section id="story" class="relative py-24 px-6 md:px-12 bg-cream">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
-      <!-- LEFT COLUMN: SARDAR SILHOUETTE Mascot in Clay Sakora -->
+      <!-- LEFT COLUMN: SARDAR SILHOUETTE Mascot in Clay Sakora (UPGRADE - Official Mascot Image & Multiplied blend) -->
       <div class="w-full md:w-1/2 flex justify-center">
         <div class="clay-bowl w-72 h-72 sm:w-[320px] sm:h-[320px] flex items-center justify-center relative overflow-hidden group">
-          <svg class="w-52 h-52 drop-shadow-2xl transition-transform duration-500 group-hover:scale-105" viewBox="0 0 200 200">
-            <path d="M50,70 C50,40 70,30 100,30 C130,30 150,40 150,70 C150,85 140,95 100,95 C60,95 50,85 50,70 Z" fill="var(--saffron)" />
-            <path d="M60,65 C60,50 80,45 100,45 C120,45 140,50 140,65 C140,75 130,85 100,85 C70,85 60,75 60,65 Z" fill="#E65100" opacity="0.3" />
-            <path d="M80,35 C85,20 115,20 120,35 Z" fill="var(--turmeric)" />
-            <circle cx="100" cy="105" r="35" fill="#FFE0B2" />
-            <path d="M73,101 C73,93 87,93 91,101 C95,101 95,108 91,108 C87,108 73,108 73,101 Z" fill="var(--charcoal)" />
-            <path d="M109,101 C109,93 123,93 127,101 C131,101 131,108 127,108 C123,108 109,108 109,101 Z" fill="var(--charcoal)" />
-            <rect x="91" y="99" width="18" height="4" fill="var(--charcoal)" />
-            <path d="M65,115 C65,150 100,165 100,165 C100,165 135,150 135,115 C135,110 125,115 100,115 C75,115 65,110 65,115 Z" fill="var(--charcoal)" />
-            <path d="M85,112 C90,110 100,115 100,115 C100,115 110,110 115,112 C120,114 115,120 100,120 C85,120 80,114 85,112 Z" fill="#111" />
-          </svg>
+          <img class="w-56 h-56 object-contain drop-shadow-2xl transition-transform duration-500 group-hover:scale-105" src="Gemini_Generated_Image_dphcpodphcpodphc.png" alt="Sardar Mascot" style="mix-blend-mode: multiply;">
           <div class="absolute bottom-4 bg-turmeric text-charcoal font-bold px-4 py-1 rounded-full text-sm border-2 border-saffron shadow-lg">
             Oye Paaji Swagat Hai!
           </div>
@@ -1050,6 +1038,66 @@
     </div>
   </div>
 
+
+
+
+
+
+<!-- DEMO WATERMARK — REMOVE ON PURCHASE -->
+<div id="demo-watermark" style="
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 99999;
+  overflow: hidden;
+">
+  <!-- Diagonal repeating watermark -->
+  <div style="
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    display: flex;
+    flex-wrap: wrap;
+    transform: rotate(-35deg);
+    opacity: 0.06;
+  ">
+    <!-- Repeat this span ~40 times -->
+    <span style="
+      font-size: 22px;
+      font-weight: 900;
+      color: #000;
+      white-space: nowrap;
+      padding: 40px 30px;
+      font-family: Arial;
+      letter-spacing: 2px;
+    ">DEMO — NOT FOR USE — Contact Shivam Kumar S 9886032862</span>
+    <!-- repeat the span here... -->
+  </div>
+
+  <!-- Corner badge -->
+  <div style="
+    position: fixed;
+    bottom: 80px; left: 20px;
+    background: rgba(0,0,0,0.75);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Arial;
+    z-index: 99999;
+    pointer-events: none;
+  ">
+    🔒 DEMO by Shivam Kumar S · 9886032862
+  </div>
+</div>
+
+
+
+
+
+
   <!-- FOOTER -->
   <footer id="footer" class="relative bg-charcoal text-gray-400 pt-16 pb-28 px-6 md:px-12">
     <div class="absolute top-0 left-0 w-full opacity-40">
@@ -1062,8 +1110,8 @@
       <!-- LEFT Column -->
       <div class="space-y-4">
         <div class="flex items-center gap-3">
-          <div class="w-12 h-12 rounded-full bg-cream border border-saffron flex items-center justify-center shadow-md">
-            <span class="text-charcoal font-bold text-lg">KC</span>
+          <div class="w-12 h-12 rounded-full bg-white border border-saffron overflow-hidden shadow-md flex items-center justify-center">
+            <img src="Gemini_Generated_Image_dphcpodphcpodphc.png" class="w-full h-full object-cover" alt="Kapoor's Cafe Footer Logo">
           </div>
           <h4 class="text-cream font-bold text-xl">Kapoor's Cafe®</h4>
         </div>
@@ -1780,6 +1828,7 @@
       renderMenu();
     }
 
+    // Filter logic helper
     function setVegFilter(filter) {
       activeFilter = filter;
       document.querySelectorAll(".filter-btn").forEach(btn => {
