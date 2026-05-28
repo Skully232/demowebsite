@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapoor's Cafe® | Authentic Punjabi Cuisine | Pure Veg</title>
+  <meta name="description" content="Kapoor's Cafe - Authentic Pure Veg Punjabi Cuisine. 15+ Branches in Bangalore, Mysore & Hyderabad. Est. June 2014. Order on WhatsApp.">
+  
+  <!-- CSS Dependencies -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Caveat:wght@400;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+
+  <!-- Tailwind Configuration for Kapoor's Cafe Palette -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            saffron: '#FF6B00',
+            turmeric: '#FFB800',
+            cream: '#FFF5E4',
+            chilliRed: '#C0392B',
+            teal: '#00897B',
+            charcoal: '#1A1A1A',
+            deepGreen: '#1B6B3A',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Premium CSS Variables & Core Styles */
+    :root {
+      --saffron: #FF6B00;
+      --turmeric: #FFB800;
+      --cream: #FFF5E4;
+      --chilli-red: #C0392B;
+      --teal: #00897B;
+      --charcoal: #1A1A1A;
+      --deep-green: #1B6B3A;
+    }
+
+    body {
+      font-family: 'Baloo 2', cursive;
+      background-color: var(--cream);
+      color: var(--charcoal);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Tiro Devanagari Hindi', serif;
+    }
+
+    .punjabi-handwritten {
+      font-family: 'Caveat', cursive;
+    }
+
+    /* Noise Overlay Effect for Hero */
+    .noise-overlay {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+    }
+
+    /* Clay Bowl (Sakora) Shape */
+    .clay-bowl {
+      border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+      background: radial-gradient(circle at 30% 30%, #E26D28, #9A3000);
+      box-shadow: inset -10px -10px 30px rgba(0,0,0,0.4), 0 15px 35px rgba(154, 48, 0, 0.35);
+      border: 4px solid #B8430D;
+    }
+
+    /* Statutory Warning neon glow */
+    .neon-warning {
+      box-shadow: 0 0 15px rgba(255, 184, 0, 0.4), inset 0 0 15px rgba(255, 184, 0, 0.2);
+      animation: neon-flicker 4s infinite alternate;
+    }
+
+    @keyframes neon-flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        box-shadow: 0 0 15px rgba(255, 184, 0, 0.5), 0 0 30px rgba(255, 107, 0, 0.3), inset 0 0 10px rgba(255, 184, 0, 0.2);
+        opacity: 1;
+      }
+      20%, 24%, 55% {
+        box-shadow: 0 0 2px rgba(255, 184, 0, 0.1);
+        opacity: 0.85;
+      }
+    }
+
+    /* Custom CSS clip-path for structural arches & garlands */
+    .mandala-divider {
+      position: relative;
+      height: 24px;
+      width: 100%;
+      display: block;
+      z-index: 20;
+    }
+
+    /* WhatsApp Pulse Ring Animation */
+    @keyframes whatsapp-pulse {
+      0%   { box-shadow: 0 0 0 0px rgba(37,211,102,0.6); }
+      70%  { box-shadow: 0 0 0 18px rgba(37,211,102,0); }
+      100% { box-shadow: 0 0 0 0px rgba(37,211,102,0); }
+    }
+    .wa-pulse {
+      animation: whatsapp-pulse 2s infinite;
+    }
+
+    /* Smooth category tab scrolling */
+    .menu-tabs::-webkit-scrollbar {
+      display: none;
+    }
+    .menu-tabs {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Nav Link Animation */
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0px;
+      height: 3px;
+      left: 0;
+      bottom: -4px;
+      background-color: var(--turmeric);
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="relative min-h-screen">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-[1000] py-4 px-6 md:px-12 transition-all duration-300 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <!-- Small Logo Badge -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-full bg-cream border-2 border-saffron flex items-center justify-center shadow-md transform group-hover:rotate-[360deg] transition-transform duration-700">
+          <span class="text-charcoal font-bold text-xl font-hindi leading-none">KC</span>
+        </div>
+        <span class="text-cream font-bold text-xl md:text-2xl tracking-wide hidden sm:block">Kapoor's Cafe</span>
+      </a>
+    </div>
+
+    <!-- Desktop Navigation Links -->
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#story" class="nav-link relative text-cream font-semibold text-base transition-colors hover:text-turmeric">Our Story</a>
+      <a href="#journey" class="nav-link relative text-cream font-semibold text-base transition-colors hover:text-turmeric">Our Journey</a>
+      <a href="#menu" class="nav-link relative text-cream font-semibold text-base transition-colors hover:text-turmeric">Menu</a>
+      <a href="#maharaja" class="nav-link relative text-cream font-semibold text-base transition-colors hover:text-turmeric">Maharaja Thali</a>
+      <a href="#locations" class="nav-link relative text-cream font-semibold text-base transition-colors hover:text-turmeric">Locations</a>
+      <a href="#franchise" class="nav-link relative text-cream font-semibold text-base transition-colors hover:text-turmeric">Franchise</a>
+    </div>
+
+    <!-- Right Side Indicator / Actions -->
+    <div class="hidden lg:flex items-center gap-4">
+      <div class="flex items-center gap-2 bg-charcoal/30 backdrop-blur-md px-3 py-1.5 rounded-full border border-cream/20">
+        <span class="w-3 h-3 rounded-full bg-deepGreen inline-block border border-cream"></span>
+        <span class="text-cream text-sm font-medium">100% Pure Veg</span>
+      </div>
+      <a href="#menu" class="bg-turmeric hover:bg-saffron text-charcoal hover:text-cream font-bold px-5 py-2 rounded-full shadow-lg transition-all transform hover:scale-105">Order Now</a>
+    </div>
+
+    <!-- Mobile Hamburger Button -->
+    <button id="menu-btn" class="md:hidden text-cream focus:outline-none z-[1010]">
+      <div id="hamburger" class="w-6 h-5 relative flex flex-col justify-between">
+        <span class="w-full h-1 bg-cream rounded-full transition-all duration-300 origin-left"></span>
+        <span class="w-full h-1 bg-cream rounded-full transition-all duration-300"></span>
+        <span class="w-full h-1 bg-cream rounded-full transition-all duration-300 origin-left"></span>
+      </div>
+    </button>
+
+    <!-- Mobile Fullscreen Navigation Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-saffron z-[1005] flex flex-col items-center justify-center gap-8 transform translate-x-full transition-transform duration-500 ease-in-out">
+      <a href="#story" class="mobile-nav-link text-cream font-bold text-3xl hover:text-turmeric transition-colors">Our Story</a>
+      <a href="#journey" class="mobile-nav-link text-cream font-bold text-3xl hover:text-turmeric transition-colors">Our Journey</a>
+      <a href="#menu" class="mobile-nav-link text-cream font-bold text-3xl hover:text-turmeric transition-colors">Menu</a>
+      <a href="#maharaja" class="mobile-nav-link text-cream font-bold text-3xl hover:text-turmeric transition-colors">Maharaja Thali</a>
+      <a href="#locations" class="mobile-nav-link text-cream font-bold text-3xl hover:text-turmeric transition-colors">Locations</a>
+      <a href="#franchise" class="mobile-nav-link text-cream font-bold text-3xl hover:text-turmeric transition-colors">Franchise</a>
+      <div class="flex items-center gap-2 bg-charcoal/25 px-4 py-2 rounded-full border border-cream/40 mt-4">
+        <span class="w-3.5 h-3.5 rounded-full bg-deepGreen inline-block"></span>
+        <span class="text-cream text-lg font-medium">100% Pure Vegetarian</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- FLOATING WHATSAPP BUTTON (GLOBAL) -->
+  <a href="https://wa.me/919739267702?text=Hi%20Kapoor's%20Cafe!%20I'd%20like%20to%20place%20an%20order." target="_blank" id="whatsapp-float" class="fixed bottom-6 right-6 z-[9990] flex items-center group transition-all duration-300">
+    <span class="mr-3 bg-charcoal text-cream text-sm font-semibold py-2 px-4 rounded-full shadow-xl opacity-0 transform translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 pointer-events-none whitespace-nowrap">
+      Order on WhatsApp 🛒
+    </span>
+    <div class="w-16 h-16 rounded-full bg-[#25D366] wa-pulse hover:scale-112 flex items-center justify-center shadow-[0_4px_20px_rgba(37,211,102,0.5)] transition-all duration-300">
+      <svg class="w-9 h-9 fill-white" viewBox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.967C16.528 1.973 14.07 1.1 11.493 1.1 6.059 1.1 1.634 5.471 1.63 10.9c-.002 1.737.457 3.432 1.328 4.911l-.973 3.555 3.644-.949c1.472.8 3.1 1.22 4.418 1.22zM17.15 14.39c-.312-.156-1.848-.91-2.131-1.013-.283-.104-.49-.156-.696.156-.206.312-.797 1.013-.977 1.216-.18.203-.36.23-.672.074-1.343-.672-2.164-1.12-3.011-2.584-.223-.385.223-.357.639-1.189.069-.14.034-.262-.017-.365-.052-.104-.49-1.18-.671-1.616-.176-.425-.37-.365-.508-.372l-.433-.008c-.15 0-.395.056-.601.28-.206.223-.788.771-.788 1.88 0 1.11.806 2.183.918 2.336.112.152 1.587 2.424 3.844 3.399.536.232.955.371 1.282.476.54.172 1.03.148 1.417.09.432-.065 1.329-.544 1.514-1.043.185-.5.185-.929.13-1.013-.056-.085-.206-.13-.518-.286z"/>
+      </svg>
+    </div>
+  </a>
+
+  <!-- SECTION 1: HERO (id="hero") -->
+  <section id="hero" class="relative min-h-screen w-full flex flex-col justify-center items-center overflow-hidden noise-overlay select-none bg-gradient-to-b from-saffron to-turmeric py-20">
+    <div id="three-canvas-container" class="absolute inset-0 z-0 pointer-events-none"></div>
+
+    <!-- Decorative Top Arch Border -->
+    <div class="absolute top-0 left-0 w-full z-10">
+      <svg class="w-full h-12 text-teal fill-current" viewBox="0 0 1200 40" preserveAspectRatio="none">
+        <path d="M0,0 Q15,30 30,0 T60,0 T90,0 T120,0 T150,0 T180,0 T210,0 T240,0 T270,0 T300,0 T330,0 T360,0 T390,0 T420,0 T450,0 T480,0 T510,0 T540,0 T570,0 T600,0 T630,0 T660,0 T690,0 T720,0 T750,0 T780,0 T810,0 T840,0 T870,0 T900,0 T930,0 T960,0 T990,0 T1020,0 T1050,0 T1080,0 T1110,0 T1140,0 T1170,0 T1200,0 L1200,40 L0,40 Z"></path>
+      </svg>
+    </div>
+
+    <!-- Hero Main Layer -->
+    <div class="relative z-10 flex flex-col items-center justify-center text-center px-6 max-w-5xl mx-auto mt-8">
+      <!-- Logo Badge -->
+      <div id="hero-badge" class="w-72 h-72 sm:w-80 sm:h-80 md:w-[320px] md:h-[320px] rounded-full bg-cream border-[10px] border-saffron flex items-center justify-center shadow-2xl mb-8 transform -rotate-[5deg] hover:rotate-0 transition-transform duration-500 cursor-pointer">
+        <div class="flex flex-col items-center">
+          <span class="text-charcoal font-bold text-7xl sm:text-8xl md:text-9xl tracking-tight leading-none">KC</span>
+          <span class="text-saffron font-bold text-sm tracking-[0.25em] uppercase mt-2">Est. June 2014</span>
+        </div>
+      </div>
+
+      <h1 id="hero-title" class="text-cream text-5xl sm:text-6xl md:text-8xl font-black drop-shadow-[4px_4px_0px_#C0392B] mb-4">
+        Kapoor's Cafe
+      </h1>
+
+      <p id="hero-subtitle" class="text-cream text-lg sm:text-2xl font-bold tracking-wide mb-3 max-w-3xl">
+        Authentic Punjabi Cuisine &bull; Pure Veg
+      </p>
+
+      <span id="hero-tagline" class="punjabi-handwritten text-turmeric text-2xl sm:text-4xl font-semibold mb-8 hover:scale-105 transition-transform duration-300 block drop-shadow-md">
+        Est. June 2014 • 15 Branches & Growing • Oye Ji Aa Jao! 🧡
+      </span>
+
+      <!-- Two CTA Buttons -->
+      <div id="hero-ctas" class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center w-full max-w-md">
+        <a href="#menu" class="w-full sm:w-auto bg-saffron hover:bg-chilliRed hover:scale-105 text-cream font-bold text-lg h-14 px-8 rounded-xl shadow-xl flex items-center justify-center border-2 border-saffron hover:border-chilliRed transition-all duration-300">
+          View Menu / Order
+        </a>
+        <a href="#locations" class="w-full sm:w-auto bg-transparent hover:bg-cream hover:text-charcoal text-cream font-bold text-lg h-14 px-8 rounded-xl shadow-xl flex items-center justify-center border-2 border-cream transition-all duration-300">
+          Our Locations
+        </a>
+      </div>
+    </div>
+
+    <!-- Festive Scalloped Bottom Border -->
+    <div class="absolute bottom-0 left-0 w-full rotate-180 z-10">
+      <svg class="w-full h-12 text-teal fill-current" viewBox="0 0 1200 40" preserveAspectRatio="none">
+        <path d="M0,0 Q15,30 30,0 T60,0 T90,0 T120,0 T150,0 T180,0 T210,0 T240,0 T270,0 T300,0 T330,0 T360,0 T390,0 T420,0 T450,0 T480,0 T510,0 T540,0 T570,0 T600,0 T630,0 T660,0 T690,0 T720,0 T750,0 T780,0 T810,0 T840,0 T870,0 T900,0 T930,0 T960,0 T990,0 T1020,0 T1050,0 T1080,0 T1110,0 T1140,0 T1170,0 T1200,0 L1200,40 L0,40 Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- MARIGOLD GARLAND SECTION DIVIDER (1) -->
+  <div class="mandala-divider">
+    <svg viewBox="0 0 100 10" preserveAspectRatio="none" class="w-full h-6 display-block">
+      <defs>
+        <pattern id="marigold-pattern" width="10" height="10" patternUnits="userSpaceOnUse">
+          <circle cx="5" cy="5" r="4.5" fill="#FFB800" />
+          <circle cx="5" cy="5" r="3" fill="#FF6B00" />
+          <circle cx="5" cy="5" r="1.5" fill="#C0392B" />
+          <path d="M1,5 Q3,3 5,5 Q3,7 1,5 Z" fill="#1B6B3A" />
+          <path d="M9,5 Q7,3 5,5 Q7,7 9,5 Z" fill="#1B6B3A" />
+        </pattern>
+      </defs>
+      <rect width="100" height="10" fill="url(#marigold-pattern)" />
+    </svg>
+  </div>
+
+  <!-- SECTION 2: OUR STORY (id="story") -->
+  <section id="story" class="relative py-24 px-6 md:px-12 bg-cream">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
+      <!-- LEFT COLUMN: SARDAR SILHOUETTE Mascot in Clay Sakora -->
+      <div class="w-full md:w-1/2 flex justify-center">
+        <div class="clay-bowl w-72 h-72 sm:w-[320px] sm:h-[320px] flex items-center justify-center relative overflow-hidden group">
+          <svg class="w-52 h-52 drop-shadow-2xl transition-transform duration-500 group-hover:scale-105" viewBox="0 0 200 200">
+            <path d="M50,70 C50,40 70,30 100,30 C130,30 150,40 150,70 C150,85 140,95 100,95 C60,95 50,85 50,70 Z" fill="var(--saffron)" />
+            <path d="M60,65 C60,50 80,45 100,45 C120,45 140,50 140,65 C140,75 130,85 100,85 C70,85 60,75 60,65 Z" fill="#E65100" opacity="0.3" />
+            <path d="M80,35 C85,20 115,20 120,35 Z" fill="var(--turmeric)" />
+            <circle cx="100" cy="105" r="35" fill="#FFE0B2" />
+            <path d="M73,101 C73,93 87,93 91,101 C95,101 95,108 91,108 C87,108 73,108 73,101 Z" fill="var(--charcoal)" />
+            <path d="M109,101 C109,93 123,93 127,101 C131,101 131,108 127,108 C123,108 109,108 109,101 Z" fill="var(--charcoal)" />
+            <rect x="91" y="99" width="18" height="4" fill="var(--charcoal)" />
+            <path d="M65,115 C65,150 100,165 100,165 C100,165 135,150 135,115 C135,110 125,115 100,115 C75,115 65,110 65,115 Z" fill="var(--charcoal)" />
+            <path d="M85,112 C90,110 100,115 100,115 C100,115 110,110 115,112 C120,114 115,120 100,120 C85,120 80,114 85,112 Z" fill="#111" />
+          </svg>
+          <div class="absolute bottom-4 bg-turmeric text-charcoal font-bold px-4 py-1 rounded-full text-sm border-2 border-saffron shadow-lg">
+            Oye Paaji Swagat Hai!
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: Story & Timeline -->
+      <div class="w-full md:w-1/2">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-4.5 h-4.5 rounded-full bg-deepGreen inline-block"></span>
+          <h2 class="text-chilliRed text-4xl sm:text-5xl font-black">Our Chotu Sa Story</h2>
+        </div>
+        <p class="text-charcoal text-lg mb-8 leading-relaxed font-semibold">
+          With the intention of staying together as a family, the elder son, <span class="text-saffron font-bold">Arpit Kapoor</span>, moved Kapoor Aunty & Uncle from Delhi to Bangalore in June 2014 and opened Kapoor's Café. Since then, it’s been a journey of pure love, pure veg, and pure Punjabi spices!
+        </p>
+
+        <!-- Timeline -->
+        <div class="relative border-l-4 border-saffron pl-8 ml-3 space-y-8">
+          <div class="timeline-item relative">
+            <div class="absolute -left-11 top-1.5 w-6 h-6 rounded-full bg-saffron border-4 border-cream flex items-center justify-center"></div>
+            <h4 class="text-xl font-bold text-saffron">2014 &bull; The Seed is Sown</h4>
+            <p class="text-gray-700 text-sm md:text-base mt-1 font-semibold">
+              Started as a small 36-seater restaurant in Bangalore to keep Mom & Dad busy and happy.
+            </p>
+          </div>
+          <div class="timeline-item relative">
+            <div class="absolute -left-11 top-1.5 w-6 h-6 rounded-full bg-saffron border-4 border-cream flex items-center justify-center"></div>
+            <h4 class="text-xl font-bold text-saffron">2015 &bull; The Doctor Joins</h4>
+            <p class="text-gray-700 text-sm md:text-base mt-1 font-semibold">
+              The younger son, <span class="font-bold text-charcoal">Dr. Apoorv Kapoor</span>, joined the family business, choosing spices over stethoscopes!
+            </p>
+          </div>
+          <div class="timeline-item relative">
+            <div class="absolute -left-11 top-1.5 w-6 h-6 rounded-full bg-saffron border-4 border-cream flex items-center justify-center"></div>
+            <h4 class="text-xl font-bold text-saffron">2018 &bull; Spreading the Love</h4>
+            <p class="text-gray-700 text-sm md:text-base mt-1 font-semibold">
+              Opened our first franchise with a dear friend. Since then, friends have built the brand together.
+            </p>
+          </div>
+          <div class="timeline-item relative">
+            <div class="absolute -left-11 top-1.5 w-6 h-6 rounded-full bg-saffron border-4 border-cream flex items-center justify-center"></div>
+            <h4 class="text-xl font-bold text-saffron">2021 &bull; Delhi Wali Chaats</h4>
+            <p class="text-gray-700 text-sm md:text-base mt-1 font-semibold">
+              Launched <span class="font-bold text-charcoal">Kapoor's Chaat Bhandaar</span> to satisfy Bangalore's craving for authentic Purani Dilli street-food.
+            </p>
+          </div>
+          <div class="timeline-item relative">
+            <div class="absolute -left-11 top-1.5 w-6 h-6 rounded-full bg-saffron border-4 border-cream flex items-center justify-center"></div>
+            <h4 class="text-xl font-bold text-saffron">2023 &bull; South Meets North</h4>
+            <p class="text-gray-700 text-sm md:text-base mt-1 font-semibold">
+              Launched <span class="font-bold text-charcoal">Shree KC Mess</span> serving authentic tastes of Andhra after 9 months of rigorous regional research.
+            </p>
+          </div>
+          <div class="timeline-item relative">
+            <div class="absolute -left-11 top-1.5 w-6 h-6 rounded-full bg-teal border-4 border-cream flex items-center justify-center animate-pulse"></div>
+            <h4 class="text-xl font-bold text-teal">NOW &bull; 15 Branches & Growing</h4>
+            <p class="text-gray-700 text-sm md:text-base mt-1 font-semibold">
+              Delighting 3 cities—Bangalore, Mysore & Hyderabad. Plus, introducing <span class="font-bold text-charcoal">Kapoor's Resorts & Events</span> at Varthur with a 500+ capacity AC hall!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARIGOLD GARLAND SECTION DIVIDER (2) -->
+  <div class="mandala-divider">
+    <svg viewBox="0 0 100 10" preserveAspectRatio="none" class="w-full h-6 display-block">
+      <rect width="100" height="10" fill="url(#marigold-pattern)" />
+    </svg>
+  </div>
+
+  <!-- SECTION 3: OUR JOURNEY (id="journey") -->
+  <section id="journey" class="relative py-24 px-6 md:px-12 bg-gradient-to-tr from-turmeric to-saffron text-cream">
+    <div class="max-w-6xl mx-auto text-center mb-16">
+      <h2 class="text-cream text-5xl font-black drop-shadow-lg inline-flex items-center gap-3">
+        <span class="w-5 h-5 rounded-full bg-deepGreen inline-block border border-cream"></span>
+        Our Journey
+      </h2>
+      <p class="punjabi-handwritten text-cream text-3xl mt-2">(To Be Continued... 🚀)</p>
+    </div>
+
+    <!-- Road Map Timeline Grid Container -->
+    <div class="max-w-4xl mx-auto relative px-4">
+      <svg class="absolute left-1/2 -translate-x-1/2 top-0 h-full w-[200px]" style="pointer-events: none; z-index: 1;" preserveAspectRatio="none" viewBox="0 0 200 1500">
+        <path d="M100,0 Q60,150 100,300 T140,600 T100,900 T60,1200 T100,1500" stroke="#2C2C2C" stroke-width="64" fill="none" stroke-linecap="round"/>
+        <path d="M100,0 Q60,150 100,300 T140,600 T100,900 T60,1200 T100,1500" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="10 15" fill="none"/>
+        <path d="M100,0 Q60,150 100,300 T140,600 T100,900 T60,1200 T100,1500" stroke="#FFB800" stroke-width="20" fill="none" opacity="0.1"/>
+      </svg>
+
+      <!-- Alternating Cards Rows -->
+      <div id="journey-cards" class="relative z-10 space-y-12">
+        <!-- ROW 1: LEFT -->
+        <div class="journey-item flex flex-col md:flex-row items-center justify-between w-full">
+          <div class="w-full md:w-[42%] text-right order-1 flex justify-end">
+            <div class="bg-cream p-4 rounded-xl shadow-2xl border-l-4 border-chilliRed max-w-[280px] text-left transform hover:-translate-y-1 transition duration-300">
+              <span class="text-xs font-bold text-saffron uppercase">Whitefield</span>
+              <h4 class="text-lg font-bold text-charcoal">Bangalore</h4>
+              <p class="text-xs text-gray-500 font-semibold mt-1">Our first home, pure love since 2014!</p>
+            </div>
+          </div>
+          <div class="w-12 h-12 rounded-full bg-chilliRed flex items-center justify-center border-4 border-turmeric text-white shadow-lg order-2 my-4 md:my-0">📍</div>
+          <div class="w-full md:w-[42%] order-3"></div>
+        </div>
+
+        <!-- ROW 2: RIGHT -->
+        <div class="journey-item flex flex-col md:flex-row items-center justify-between w-full">
+          <div class="w-full md:w-[42%] order-1"></div>
+          <div class="w-12 h-12 rounded-full bg-chilliRed flex items-center justify-center border-4 border-turmeric text-white shadow-lg order-2 my-4 md:my-0">📍</div>
+          <div class="w-full md:w-[42%] text-left order-3 flex justify-start">
+            <div class="bg-cream p-4 rounded-xl shadow-2xl border-l-4 border-saffron max-w-[280px] text-left transform hover:-translate-y-1 transition duration-300">
+              <span class="text-xs font-bold text-saffron uppercase">HSR Layout</span>
+              <h4 class="text-lg font-bold text-charcoal">Bangalore</h4>
+              <p class="text-xs text-gray-500 font-semibold mt-1">Dhaba vibes in South Bangalore.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 3: LEFT -->
+        <div class="journey-item flex flex-col md:flex-row items-center justify-between w-full">
+          <div class="w-full md:w-[42%] text-right order-1 flex justify-end">
+            <div class="bg-cream p-4 rounded-xl shadow-2xl border-l-4 border-chilliRed max-w-[280px] text-left transform hover:-translate-y-1 transition duration-300">
+              <span class="text-xs font-bold text-saffron uppercase">Kalyan Nagar</span>
+              <h4 class="text-lg font-bold text-charcoal">Bangalore</h4>
+              <p class="text-xs text-gray-500 font-semibold mt-1">A welcoming space in the North-East.</p>
+            </div>
+          </div>
+          <div class="w-12 h-12 rounded-full bg-chilliRed flex items-center justify-center border-4 border-turmeric text-white shadow-lg order-2 my-4 md:my-0">📍</div>
+          <div class="w-full md:w-[42%] order-3"></div>
+        </div>
+
+        <!-- ROW 4: RIGHT -->
+        <div class="journey-item flex flex-col md:flex-row items-center justify-between w-full">
+          <div class="w-full md:w-[42%] order-1"></div>
+          <div class="w-12 h-12 rounded-full bg-chilliRed flex items-center justify-center border-4 border-turmeric text-white shadow-lg order-2 my-4 md:my-0">📍</div>
+          <div class="w-full md:w-[42%] text-left order-3 flex justify-start">
+            <div class="bg-cream p-4 rounded-xl shadow-2xl border-l-4 border-saffron max-w-[280px] text-left transform hover:-translate-y-1 transition duration-300">
+              <span class="text-xs font-bold text-saffron uppercase">Jayanagar</span>
+              <h4 class="text-lg font-bold text-charcoal">Bangalore</h4>
+              <p class="text-xs text-gray-500 font-semibold mt-1">Serving high-quality Punjabi cuisine to classic south bangaloreans.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 5: LEFT -->
+        <div class="journey-item flex flex-col md:flex-row items-center justify-between w-full">
+          <div class="w-full md:w-[42%] text-right order-1 flex justify-end">
+            <div class="bg-cream p-4 rounded-xl shadow-2xl border-l-4 border-chilliRed max-w-[280px] text-left transform hover:-translate-y-1 transition duration-300">
+              <span class="text-xs font-bold text-saffron uppercase">Kalidasa Road</span>
+              <h4 class="text-lg font-bold text-charcoal">Mysore</h4>
+              <p class="text-xs text-gray-500 font-semibold mt-1">Bringing rich butter taste to the heritage city.</p>
+            </div>
+          </div>
+          <div class="w-12 h-12 rounded-full bg-chilliRed flex items-center justify-center border-4 border-turmeric text-white shadow-lg order-2 my-4 md:my-0">📍</div>
+          <div class="w-full md:w-[42%] order-3"></div>
+        </div>
+
+        <!-- ROW 6: RIGHT -->
+        <div class="journey-item flex flex-col md:flex-row items-center justify-between w-full">
+          <div class="w-full md:w-[42%] order-1"></div>
+          <div class="w-12 h-12 rounded-full bg-chilliRed flex items-center justify-center border-4 border-turmeric text-white shadow-lg order-2 my-4 md:my-0">📍</div>
+          <div class="w-full md:w-[42%] text-left order-3 flex justify-start">
+            <div class="bg-cream p-4 rounded-xl shadow-2xl border-l-4 border-saffron max-w-[280px] text-left transform hover:-translate-y-1 transition duration-300">
+              <span class="text-xs font-bold text-saffron uppercase">Sharda Devi Nagar</span>
+              <h4 class="text-lg font-bold text-charcoal">Mysore</h4>
+              <p class="text-xs text-gray-500 font-semibold mt-1">Another glorious location inside Mysuru.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 7: LEFT -->
+        <div class="journey-item flex flex-col md:flex-row items-center justify-between w-full">
+          <div class="w-full md:w-[42%] text-right order-1 flex justify-end">
+            <div class="bg-cream p-4 rounded-xl shadow-2xl border-l-4 border-chilliRed max-w-[280px] text-left transform hover:-translate-y-1 transition duration-300">
+              <span class="text-xs font-bold text-saffron uppercase">Electronic City</span>
+              <h4 class="text-lg font-bold text-charcoal">Bangalore</h4>
+              <p class="text-xs text-gray-500 font-semibold mt-1">Fuelling the tech workforce with rich lassi!</p>
+            </div>
+          </div>
+          <div class="w-12 h-12 rounded-full bg-chilliRed flex items-center justify-center border-4 border-turmeric text-white shadow-lg order-2 my-4 md:my-0">📍</div>
+          <div class="w-full md:w-[42%] order-3"></div>
+        </div>
+
+        <!-- ROW 8: RIGHT -->
+        <div class="journey-item flex flex-col md:flex-row items-center justify-between w-full">
+          <div class="w-full md:w-[42%] order-1"></div>
+          <div class="w-12 h-12 rounded-full bg-chilliRed flex items-center justify-center border-4 border-turmeric text-white shadow-lg order-2 my-4 md:my-0">📍</div>
+          <div class="w-full md:w-[42%] text-left order-3 flex justify-start">
+            <div class="bg-cream p-4 rounded-xl shadow-2xl border-l-4 border-saffron max-w-[280px] text-left transform hover:-translate-y-1 transition duration-300">
+              <span class="text-xs font-bold text-saffron uppercase">Kadugodi</span>
+              <h4 class="text-lg font-bold text-charcoal">Bangalore</h4>
+              <p class="text-xs text-gray-500 font-semibold mt-1">Expanding across suburban Bangalore hubs.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center pt-8">
+          <span class="punjabi-handwritten text-3xl text-cream font-bold drop-shadow-md">
+            ...And many more branches in Hyderabad, RR Nagar, Rajajinagar, KR Puram, Yelahanka & Hennur! 🚀
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARIGOLD GARLAND SECTION DIVIDER (3) -->
+  <div class="mandala-divider">
+    <svg viewBox="0 0 100 10" preserveAspectRatio="none" class="w-full h-6 display-block">
+      <rect width="100" height="10" fill="url(#marigold-pattern)" />
+    </svg>
+  </div>
+
+  <!-- SECTION 4: MENU (id="menu") -->
+  <section id="menu" class="relative py-24 px-6 md:px-12 bg-cream">
+    <div class="max-w-6xl mx-auto text-center mb-12">
+      <h2 class="text-chilliRed text-5xl font-black inline-flex items-center gap-3">
+        <span class="w-5 h-5 rounded-full bg-deepGreen inline-block"></span>
+        Oye Ji Kha Lo!
+      </h2>
+      <p class="text-charcoal text-lg mt-2 font-bold uppercase tracking-wide">
+        Pure Veg &bull; Whole Wheat &bull; Direct WhatsApp Order System
+      </p>
+    </div>
+
+    <!-- Tab Navigation Bar (Scrollable on mobile) -->
+    <div class="max-w-6xl mx-auto flex overflow-x-auto menu-tabs gap-3 pb-4 justify-start lg:justify-center">
+      <button onclick="switchTab('drinks')" id="tab-drinks" class="menu-tab-btn active bg-saffron text-cream px-6 py-3 rounded-full font-bold shadow-md transition-all border border-transparent whitespace-nowrap">
+        🥛 Drinks & Lassi
+      </button>
+
+      <button onclick="switchTab('kadaispl')" id="tab-kadaispl" class="menu-tab-btn bg-cream text-charcoal hover:bg-saffron hover:text-cream px-6 py-3 rounded-full font-bold transition-all border border-charcoal/30 whitespace-nowrap">
+        🍳 Kadai Delicacies
+      </button>
+
+      <button onclick="switchTab('starters')" id="tab-starters" class="menu-tab-btn bg-cream text-charcoal hover:bg-saffron hover:text-cream px-6 py-3 rounded-full font-bold transition-all border border-charcoal/30 whitespace-nowrap">
+        🍢 Masti Starters
+      </button>
+
+      <button onclick="switchTab('rotishoti')" id="tab-rotishoti" class="menu-tab-btn bg-cream text-charcoal hover:bg-saffron hover:text-cream px-6 py-3 rounded-full font-bold transition-all border border-charcoal/30 whitespace-nowrap">
+        🫓 Roti & Parathas
+      </button>
+
+      <button onclick="switchTab('maincourse')" id="tab-maincourse" class="menu-tab-btn bg-cream text-charcoal hover:bg-saffron hover:text-cream px-6 py-3 rounded-full font-bold transition-all border border-charcoal/30 whitespace-nowrap">
+        🍛 Main Course Gravies
+      </button>
+
+      <button onclick="switchTab('rajathali')" id="tab-rajathali" class="menu-tab-btn bg-cream text-charcoal hover:bg-saffron hover:text-cream px-6 py-3 rounded-full font-bold transition-all border border-charcoal/30 whitespace-nowrap">
+        👑 Ek Raja Thali
+      </button>
+
+      <button onclick="switchTab('meetha')" id="tab-meetha" class="menu-tab-btn bg-cream text-charcoal hover:bg-saffron hover:text-cream px-6 py-3 rounded-full font-bold transition-all border border-charcoal/30 whitespace-nowrap">
+        🍮 Curd & Desserts
+      </button>
+    </div>
+
+    <!-- SEARCH & FILTER BAR -->
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 mt-6 mb-10">
+      <div class="relative w-full sm:w-80">
+        <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+          <i class="ph ph-magnifying-glass text-xl"></i>
+        </span>
+        <input type="text" id="menu-search" oninput="filterMenu()" placeholder="Search delicious dishes..." class="w-full bg-white border border-charcoal/20 pl-10 pr-4 py-2.5 rounded-xl text-charcoal focus:outline-none focus:ring-2 focus:ring-saffron">
+      </div>
+
+      <div class="flex gap-2">
+        <button onclick="setVegFilter('all')" id="filter-all" class="filter-btn active bg-charcoal text-cream px-4 py-1.5 rounded-lg text-sm font-bold shadow-sm">
+          All Items
+        </button>
+        <button onclick="setVegFilter('jain')" id="filter-jain" class="filter-btn bg-white text-charcoal border border-charcoal/20 px-4 py-1.5 rounded-lg text-sm font-bold flex items-center gap-1">
+          <span class="w-2.5 h-2.5 rounded-full bg-deepGreen"></span> Jain Friendly (No Onion/Garlic)
+        </button>
+      </div>
+    </div>
+
+    <!-- MENU GRID -->
+    <div id="menu-grid" class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in">
+      <!-- Injected Dynamically -->
+    </div>
+
+    <!-- Festive Notes -->
+    <div class="max-w-4xl mx-auto mt-12 bg-saffron/10 border-2 border-dashed border-saffron rounded-2xl p-6 text-center">
+      <p class="text-charcoal font-semibold text-lg">
+        🍯 Spices, Butter & Ghee run in our veins!
+      </p>
+      <span class="punjabi-handwritten text-saffron text-2xl font-bold mt-1 block">
+        "Served with Sakora Curd, Amul Butter & Green Chutney. No Spice Parathas available on request."
+      </span>
+    </div>
+  </section>
+
+  <!-- MARIGOLD GARLAND SECTION DIVIDER (4) -->
+  <div class="mandala-divider">
+    <svg viewBox="0 0 100 10" preserveAspectRatio="none" class="w-full h-6 display-block">
+      <rect width="100" height="10" fill="url(#marigold-pattern)" />
+    </svg>
+  </div>
+
+  <!-- SECTION 5: MAHARAJA THALI SPOTLIGHT (id="maharaja") -->
+  <section id="maharaja" class="relative py-24 px-6 md:px-12 bg-gradient-to-r from-saffron to-chilliRed text-cream overflow-hidden">
+    <div class="max-w-6xl mx-auto text-center mb-16 relative z-10">
+      <h2 class="text-cream text-5xl font-black drop-shadow-xl inline-flex items-center gap-3">
+        <span class="w-5 h-5 rounded-full bg-deepGreen inline-block border border-cream"></span>
+        Kapoor Paaji's Maharaja Thali
+      </h2>
+      <p class="punjabi-handwritten text-turmeric text-3xl mt-2">Wah Ji Wah &bull; Select directly to add to your order! 👑</p>
+    </div>
+
+    <!-- Thali Grid (No details hiding, no blurry truncation, fully responsive and clear) -->
+    <div id="maharaja-grid" class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+      <!-- Thali Card 1 -->
+      <div class="bg-cream text-charcoal border-4 border-turmeric rounded-2xl p-6 shadow-2xl relative flex flex-col justify-between transform hover:scale-[1.02] transition-all duration-300">
+        <div>
+          <span class="bg-saffron text-cream text-xs font-bold px-3 py-1 rounded-full uppercase inline-block mb-3">Chef's Choice</span>
+          <h3 class="text-2xl font-black text-charcoal mb-2">Bedmi Maharaja Thali 👑</h3>
+          <p class="text-sm text-gray-700 leading-relaxed font-semibold mb-6">
+            Kachori Bedmi (6pc), Chole, Gobhi Aloo, Dilli ke Chatpate Aloo, Corn Cheese Roll (2pc), Papdi Paneer (2pc), Kheera Raita, Curd, Matar Pulao, Lassi, Chaas, Rabri, Salad, Pickle & Chutney.
+          </p>
+        </div>
+        <div class="border-t border-charcoal/20 pt-4 mt-auto flex flex-col gap-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs text-gray-500 font-bold">Dine-In Feast</span>
+            <span class="text-chilliRed font-extrabold text-2xl">₹800</span>
+          </div>
+          <!-- Quantity Selector for Thali -->
+          <div class="w-full" id="ctrl-Bedmi-Maharaja-Thali">
+            <button onclick="updateCartItem('Bedmi Maharaja Thali', 800, 1)" class="w-full bg-saffron hover:bg-chilliRed text-cream font-bold py-2.5 rounded-xl flex items-center justify-center gap-2 transition-all">
+              <i class="ph ph-plus-circle text-lg"></i> Add to Feast
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thali Card 2 -->
+      <div class="bg-cream text-charcoal border-4 border-turmeric rounded-2xl p-6 shadow-2xl relative flex flex-col justify-between transform hover:scale-[1.02] transition-all duration-300">
+        <div>
+          <span class="bg-saffron text-cream text-xs font-bold px-3 py-1 rounded-full uppercase inline-block mb-3">Dilli Spl</span>
+          <h3 class="text-2xl font-black text-charcoal mb-2">Bhatura Maharaja Thali 👑</h3>
+          <p class="text-sm text-gray-700 leading-relaxed font-semibold mb-6">
+            Pindi Chole, Paneer Wale Bhature (3pc), Jeera Aloo, Chole, Corn Cheese Roll (2pc), Papdi Paneer (2pc), Kheera Raita, Matar Pulao, Curd, Lassi, Chaas, Rabri, Salad, Pickle & Chutney.
+          </p>
+        </div>
+        <div class="border-t border-charcoal/20 pt-4 mt-auto flex flex-col gap-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs text-gray-500 font-bold">Delhi Express</span>
+            <span class="text-chilliRed font-extrabold text-2xl">₹820</span>
+          </div>
+          <div class="w-full" id="ctrl-Bhatura-Maharaja-Thali">
+            <button onclick="updateCartItem('Bhatura Maharaja Thali', 820, 1)" class="w-full bg-saffron hover:bg-chilliRed text-cream font-bold py-2.5 rounded-xl flex items-center justify-center gap-2 transition-all">
+              <i class="ph ph-plus-circle text-lg"></i> Add to Feast
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thali Card 3 -->
+      <div class="bg-cream text-charcoal border-4 border-turmeric rounded-2xl p-6 shadow-2xl relative flex flex-col justify-between transform hover:scale-[1.02] transition-all duration-300">
+        <div>
+          <span class="bg-teal text-cream text-xs font-bold px-3 py-1 rounded-full uppercase inline-block mb-3">Giant Feast</span>
+          <h3 class="text-2xl font-black text-charcoal mb-2">Dara Singh Paratha Thali 1 👑</h3>
+          <p class="text-sm text-gray-700 leading-relaxed font-semibold mb-6">
+            Aloo/Aloo Pyaaz Paratha, Chole, Dilli ke Chatpate Aloo, Corn Cheese Roll (2pc), Papdi Paneer (2pc), Kheera Raita, Matar Pulao, Curd, White Butter (2pc), Lassi, Chaas, Rabri, Salad, Pickle & Chutney.
+          </p>
+        </div>
+        <div class="border-t border-charcoal/20 pt-4 mt-auto flex flex-col gap-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs text-gray-500 font-bold">Unbeatable Punjabi Power</span>
+            <span class="text-chilliRed font-extrabold text-2xl">₹930</span>
+          </div>
+          <div class="w-full" id="ctrl-Dara-Singh-Paratha-Thali-1">
+            <button onclick="updateCartItem('Dara Singh Paratha Thali 1', 930, 1)" class="w-full bg-saffron hover:bg-chilliRed text-cream font-bold py-2.5 rounded-xl flex items-center justify-center gap-2 transition-all">
+              <i class="ph ph-plus-circle text-lg"></i> Add to Feast
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thali Card 4 -->
+      <div class="bg-cream text-charcoal border-4 border-turmeric rounded-2xl p-6 shadow-2xl relative flex flex-col justify-between transform hover:scale-[1.02] transition-all duration-300">
+        <div>
+          <span class="bg-teal text-cream text-xs font-bold px-3 py-1 rounded-full uppercase inline-block mb-3">Super Giant</span>
+          <h3 class="text-2xl font-black text-charcoal mb-2">Dara Singh Paratha Thali 2 👑</h3>
+          <p class="text-sm text-gray-700 leading-relaxed font-semibold mb-6">
+            Gobhi/Mooli Paratha, Chole, Dilli ke Chatpate Aloo, Corn Cheese Roll (2pc), Papdi Paneer (2pc), Kheera Raita, Matar Pulao, Curd, White Butter (2pc), Lassi, Chaas, Rabri, Salad, Pickle & Chutney.
+          </p>
+        </div>
+        <div class="border-t border-charcoal/20 pt-4 mt-auto flex flex-col gap-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs text-gray-500 font-bold">The Authentic Experience</span>
+            <span class="text-chilliRed font-extrabold text-2xl">₹960</span>
+          </div>
+          <div class="w-full" id="ctrl-Dara-Singh-Paratha-Thali-2">
+            <button onclick="updateCartItem('Dara Singh Paratha Thali 2', 960, 1)" class="w-full bg-saffron hover:bg-chilliRed text-cream font-bold py-2.5 rounded-xl flex items-center justify-center gap-2 transition-all">
+              <i class="ph ph-plus-circle text-lg"></i> Add to Feast
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thali Card 5 -->
+      <div class="bg-cream text-charcoal border-4 border-turmeric rounded-2xl p-6 shadow-2xl relative flex flex-col justify-between transform hover:scale-[1.02] transition-all duration-300">
+        <div>
+          <span class="bg-saffron text-cream text-xs font-bold px-3 py-1 rounded-full uppercase inline-block mb-3">Cheesy Delight</span>
+          <h3 class="text-2xl font-black text-charcoal mb-2">Cheese Paratha Thali 👑</h3>
+          <p class="text-sm text-gray-700 leading-relaxed font-semibold mb-6">
+            Cheese Parathas (2pc), Served with Chole, Dilli ke Chatpate Aloo, Corn Cheese Roll (2pc), Papdi Paneer (2pc), Kheera Raita, Matar Pulao, Curd, White Butter (2pc), Lassi, Chaas, Rabri, Salad, Pickle & Chutney.
+          </p>
+        </div>
+        <div class="border-t border-charcoal/20 pt-4 mt-auto flex flex-col gap-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs text-gray-500 font-bold">Kids & Family Favorite</span>
+            <span class="text-chilliRed font-extrabold text-2xl">₹1050</span>
+          </div>
+          <div class="w-full" id="ctrl-Cheese-Paratha-Thali">
+            <button onclick="updateCartItem('Cheese Paratha Thali', 1050, 1)" class="w-full bg-saffron hover:bg-chilliRed text-cream font-bold py-2.5 rounded-xl flex items-center justify-center gap-2 transition-all">
+              <i class="ph ph-plus-circle text-lg"></i> Add to Feast
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thali Card 6 -->
+      <div class="bg-cream text-charcoal border-4 border-turmeric rounded-2xl p-6 shadow-2xl relative flex flex-col justify-between transform hover:scale-[1.02] transition-all duration-300">
+        <div>
+          <span class="bg-[#1B6B3A] text-cream text-xs font-bold px-3 py-1 rounded-full uppercase inline-block mb-3">Winter Special ❄️</span>
+          <h3 class="text-2xl font-black text-charcoal mb-2">Winters Maharaja Thali 👑</h3>
+          <p class="text-sm text-gray-700 leading-relaxed font-semibold mb-6">
+            Sarso Da Saag, 3 Makke de Parathay, Dilli ke Chatpate Aloo, 2 Pcs Corn Cheese Roll, 2Pcs Papdi Paneer, Kheera Raita, Curd, White Butter 2 Pc, Roasted Papad, Chaas, Lassi, Moong Dal Halwa, Gur, Salad, Pickle & Chutney.
+          </p>
+        </div>
+        <div class="border-t border-charcoal/20 pt-4 mt-auto flex flex-col gap-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs text-gray-500 font-bold">Seasonal Joy</span>
+            <span class="text-chilliRed font-extrabold text-2xl">₹900</span>
+          </div>
+          <div class="w-full" id="ctrl-Winters-Maharaja-Thali">
+            <button onclick="updateCartItem('Winters Maharaja Thali', 900, 1)" class="w-full bg-saffron hover:bg-chilliRed text-cream font-bold py-2.5 rounded-xl flex items-center justify-center gap-2 transition-all">
+              <i class="ph ph-plus-circle text-lg"></i> Add to Feast
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARIGOLD GARLAND SECTION DIVIDER (5) -->
+  <div class="mandala-divider">
+    <svg viewBox="0 0 100 10" preserveAspectRatio="none" class="w-full h-6 display-block">
+      <rect width="100" height="10" fill="url(#marigold-pattern)" />
+    </svg>
+  </div>
+
+  <!-- SECTION 6: PUNJABI STATUTORY WARNING (id="warning") -->
+  <section id="warning" class="relative py-24 px-6 md:px-12 bg-charcoal text-center flex flex-col items-center">
+    <!-- Neon Warning Border Card -->
+    <div id="neon-warning-card" class="neon-warning border-4 border-turmeric rounded-3xl p-10 max-w-lg bg-black text-cream transform scale-95 transition-transform duration-500">
+      <div class="flex items-center justify-center gap-2 mb-6">
+        <span class="text-turmeric text-2xl">✖</span>
+        <h3 class="text-turmeric font-black text-xl sm:text-2xl tracking-widest uppercase">Punjabi Statutory Warning</h3>
+        <span class="text-turmeric text-2xl">✖</span>
+      </div>
+
+      <div class="my-6">
+        <h1 class="text-chilliRed text-4xl sm:text-5xl font-black uppercase tracking-tight leading-none mb-2">
+          Spices, Butter & Ghee
+        </h1>
+        <h2 class="text-cream text-3xl font-bold lowercase tracking-wider">
+          is in our Veins...
+        </h2>
+      </div>
+
+      <p class="text-cream text-base md:text-lg mb-6 leading-relaxed font-semibold">
+        If you want less of it in your dish,
+      </p>
+
+      <div class="border-t-2 border-dashed border-turmeric/40 pt-6">
+        <span class="text-turmeric text-xl md:text-2xl font-black block tracking-wider uppercase">
+          ⚠️ Please let us KNOW IN ADVANCE ⚠️
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARIGOLD GARLAND SECTION DIVIDER (6) -->
+  <div class="mandala-divider">
+    <svg viewBox="0 0 100 10" preserveAspectRatio="none" class="w-full h-6 display-block">
+      <rect width="100" height="10" fill="url(#marigold-pattern)" />
+    </svg>
+  </div>
+
+  <!-- SECTION 7: LOCATIONS (id="locations") -->
+  <section id="locations" class="relative py-24 px-6 md:px-12 bg-cream">
+    <div class="max-w-6xl mx-auto text-center mb-16">
+      <h2 class="text-chilliRed text-5xl font-black inline-flex items-center gap-3">
+        <span class="w-5 h-5 rounded-full bg-deepGreen inline-block"></span>
+        Find Us, Oye Ji!
+      </h2>
+      <p class="text-charcoal text-lg mt-2 font-bold uppercase tracking-wide">15 Branches &bull; 3 Cities &bull; Authentic pure Punjabi taste</p>
+    </div>
+
+    <!-- City Cards Grid -->
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+      <!-- Bangalore Card -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-xl border-t-8 border-saffron flex flex-col justify-between">
+        <div>
+          <div class="bg-gradient-to-r from-saffron to-turmeric py-6 px-6 text-center text-cream">
+            <h3 class="text-2xl font-black">Bangalore 🏙️</h3>
+            <p class="text-xs font-semibold uppercase tracking-wider mt-1">11 Beautiful Branches</p>
+          </div>
+          <div class="p-6 space-y-4 text-charcoal font-semibold max-h-80 overflow-y-auto">
+            <div class="flex items-center gap-3 border-b border-gray-100 pb-2"><span class="text-xl">📍</span> Whitefield</div>
+            <div class="flex items-center gap-3 border-b border-gray-100 pb-2"><span class="text-xl">📍</span> HSR Layout</div>
+            <div class="flex items-center gap-3 border-b border-gray-100 pb-2"><span class="text-xl">📍</span> Kalyan Nagar</div>
+            <div class="flex items-center gap-3 border-b border-gray-100 pb-2"><span class="text-xl">📍</span> Jayanagar</div>
+            <div class="flex items-center gap-3 border-b border-gray-100 pb-2"><span class="text-xl">📍</span> Electronic City</div>
+            <div class="flex items-center gap-3 border-b border-gray-100 pb-2"><span class="text-xl">📍</span> Kadugodi</div>
+            <div class="flex items-center gap-3 border-b border-gray-100 pb-2"><span class="text-xl">📍</span> RR Nagar</div>
+            <div class="flex items-center gap-3 border-b border-gray-100 pb-2"><span class="text-xl">📍</span> Rajajinagar</div>
+            <div class="flex items-center gap-3 border-b border-gray-100 pb-2"><span class="text-xl">📍</span> KR Puram</div>
+            <div class="flex items-center gap-3 border-b border-gray-100 pb-2"><span class="text-xl">📍</span> Yelahanka</div>
+            <div class="flex items-center gap-3 border-b border-gray-100 pb-2"><span class="text-xl">📍</span> Hennur</div>
+          </div>
+        </div>
+        <div class="bg-gray-50 py-4 text-center font-bold text-saffron border-t border-gray-100">Our Home City</div>
+      </div>
+
+      <!-- Mysore Card -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-xl border-t-8 border-saffron flex flex-col justify-between">
+        <div>
+          <div class="bg-gradient-to-r from-saffron to-turmeric py-6 px-6 text-center text-cream">
+            <h3 class="text-2xl font-black">Mysore 🏛️</h3>
+            <p class="text-xs font-semibold uppercase tracking-wider mt-1">2 Traditional Branches</p>
+          </div>
+          <div class="p-6 space-y-4 text-charcoal font-semibold">
+            <div class="flex items-center gap-3 border-b border-gray-100 pb-2"><span class="text-xl">📍</span> Kalidasa Road</div>
+            <div class="flex items-center gap-3 border-b border-gray-100 pb-2"><span class="text-xl">📍</span> Sharda Devi Nagar</div>
+          </div>
+        </div>
+        <div class="bg-gray-50 py-4 text-center font-bold text-saffron border-t border-gray-100">Heritage Culture</div>
+      </div>
+
+      <!-- Hyderabad Card -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-xl border-t-8 border-saffron flex flex-col justify-between">
+        <div>
+          <div class="bg-gradient-to-r from-saffron to-turmeric py-6 px-6 text-center text-cream">
+            <h3 class="text-2xl font-black">Hyderabad 🕌</h3>
+            <p class="text-xs font-semibold uppercase tracking-wider mt-1">2 Glorious Branches</p>
+          </div>
+          <div class="p-6 space-y-4 text-charcoal font-semibold">
+            <div class="flex items-center gap-3 border-b border-gray-100 pb-2"><span class="text-xl">📍</span> Banjara Hills</div>
+            <div class="flex items-center gap-3 border-b border-gray-100 pb-2"><span class="text-xl">📍</span> Hitex</div>
+          </div>
+        </div>
+        <div class="bg-gray-50 py-4 text-center font-bold text-saffron border-t border-gray-100">Rich Nizami Love</div>
+      </div>
+    </div>
+
+    <!-- Resort Banner -->
+    <div class="max-w-6xl mx-auto bg-gradient-to-r from-saffron to-chilliRed rounded-3xl p-8 text-cream text-center shadow-2xl relative overflow-hidden">
+      <div class="relative z-10">
+        <h3 class="text-3xl md:text-4xl font-black mb-2">Kapoor's Resorts & Events 🏨</h3>
+        <p class="text-base sm:text-lg font-bold tracking-wide text-turmeric uppercase mb-4">Balagere Varthur, Bangalore</p>
+        <p class="max-w-3xl mx-auto text-sm sm:text-base leading-relaxed font-semibold">
+          Convention Hall with 500+ Capacity &bull; Beautiful Swimming Pool &bull; Fully Furnished Premium Rooms &bull; Separate Festive Dining Section. Perfect for celebrations, weddings, and grand gatherings!
+        </p>
+      </div>
+      <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-cream/10 rounded-full blur-2xl"></div>
+    </div>
+  </section>
+
+  <!-- MARIGOLD GARLAND SECTION DIVIDER (7) -->
+  <div class="mandala-divider">
+    <svg viewBox="0 0 100 10" preserveAspectRatio="none" class="w-full h-6 display-block">
+      <rect width="100" height="10" fill="url(#marigold-pattern)" />
+    </svg>
+  </div>
+
+  <!-- SECTION 8: FRANCHISE CTA (id="franchise") -->
+  <section id="franchise" class="relative py-24 px-6 md:px-12 bg-gradient-to-b from-saffron to-turmeric text-cream text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-cream text-5xl font-black drop-shadow-xl inline-flex items-center gap-3 mb-6">
+        <span class="w-5 h-5 rounded-full bg-deepGreen inline-block border border-cream"></span>
+        Grow With Us, Paaji!
+      </h2>
+      <p class="text-cream text-lg sm:text-xl font-bold leading-relaxed mb-10">
+        Become a proud partner of Bangalore, Mysore & Hyderabad's favorite pure vegetarian Punjabi chain. Grow your business and secure success with Kapoor Aunty's legendary home-style recipes.
+      </p>
+
+      <!-- Two Contact Options -->
+      <div class="flex flex-col sm:flex-row gap-6 justify-center max-w-lg mx-auto">
+        <a href="https://wa.me/919739267702?text=Hi!%20I'm%20interested%20in%20a%20Kapoor's%20Cafe%20Franchise" target="_blank" class="bg-[#25D366] hover:bg-emerald-600 border-2 border-emerald-500 hover:scale-105 transition-all text-cream py-4 px-8 rounded-full font-bold text-lg flex items-center justify-center gap-3 shadow-2xl">
+          <i class="ph ph-whatsapp-logo text-2xl"></i>
+          Chat on WhatsApp
+        </a>
+        <a href="tel:+919739267702" class="bg-transparent hover:bg-cream hover:text-charcoal border-2 border-cream hover:scale-105 transition-all text-cream py-4 px-8 rounded-full font-bold text-lg flex items-center justify-center gap-3 shadow-2xl">
+          📞 Call Arpit Kapoor
+        </a>
+      </div>
+      <p class="punjabi-handwritten text-cream text-2xl font-bold mt-8 italic">
+        Contact Arpit Kapoor &bull; +91 97392 67702
+      </p>
+    </div>
+  </section>
+
+  <!-- PERSISTENT STICKY CART BAR -->
+  <div id="cart-sticky-bar" class="fixed bottom-0 left-0 w-full bg-charcoal text-cream py-4 px-6 z-[9995] shadow-[0_-4px_30px_rgba(0,0,0,0.3)] transform translate-y-full transition-transform duration-300 flex items-center justify-between border-t-4 border-saffron">
+    <div class="flex items-center gap-3">
+      <div class="relative bg-saffron text-cream p-2.5 rounded-full">
+        <i class="ph ph-shopping-cart text-2xl"></i>
+        <span id="cart-badge" class="absolute -top-1.5 -right-1.5 bg-chilliRed text-cream font-extrabold text-xs px-2 py-0.5 rounded-full border border-cream">0</span>
+      </div>
+      <div>
+        <p class="text-sm font-bold text-gray-400">YOUR CART</p>
+        <p id="cart-summary" class="text-lg font-extrabold text-cream">0 Items &bull; ₹0</p>
+      </div>
+    </div>
+    <button onclick="toggleCartDrawer(true)" class="bg-turmeric hover:bg-saffron text-charcoal hover:text-cream font-black py-3 px-6 rounded-xl transition-all duration-300 shadow-md flex items-center gap-2 text-base uppercase tracking-wider">
+      Review Order <i class="ph ph-caret-right text-lg"></i>
+    </button>
+  </div>
+
+  <!-- CART SIDE SLIDE REVIEW DRAWER -->
+  <div id="cart-drawer-overlay" onclick="toggleCartDrawer(false)" class="fixed inset-0 bg-black/60 z-[9996] hidden opacity-0 transition-opacity duration-300"></div>
+  <div id="cart-drawer" class="fixed top-0 right-0 h-full w-full sm:w-[450px] bg-cream z-[9997] shadow-2xl border-l-4 border-saffron transform translate-x-full transition-transform duration-300 flex flex-col justify-between overflow-hidden">
+    <!-- Header -->
+    <div class="bg-saffron text-cream p-6 flex items-center justify-between shadow-md">
+      <div class="flex items-center gap-2">
+        <i class="ph ph-shopping-bag-open text-2xl"></i>
+        <h3 class="text-2xl font-black">Your Order List</h3>
+      </div>
+      <button onclick="toggleCartDrawer(false)" class="text-cream hover:bg-charcoal/20 p-2 rounded-full transition-colors focus:outline-none">
+        <i class="ph ph-x text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- Items Section -->
+    <div id="cart-drawer-items" class="flex-1 overflow-y-auto p-6 space-y-4">
+      <!-- Items dynamically populated -->
+    </div>
+
+    <!-- Checkout Options & Actions -->
+    <div class="bg-white p-6 border-t-2 border-dashed border-gray-200 space-y-4">
+      <!-- Instruction Area linked to warning! -->
+      <div>
+        <label class="block text-sm font-bold text-charcoal/80 mb-1 flex items-center gap-1.5">
+          🌶️ Cooking instructions / Spice adjustments:
+        </label>
+        <textarea id="cart-instruction" placeholder="E.g., Less butter & ghee / Jain friendly style / Kids non-spicy..." class="w-full bg-cream border border-charcoal/20 rounded-xl p-3 text-sm text-charcoal focus:outline-none focus:ring-2 focus:ring-saffron h-20 resize-none font-semibold"></textarea>
+      </div>
+
+      <!-- Dine-in / Takeaway -->
+      <div>
+        <label class="block text-sm font-bold text-charcoal/80 mb-1.5">Dining Option:</label>
+        <div class="grid grid-cols-2 gap-3">
+          <label class="border-2 border-saffron bg-cream p-2.5 rounded-xl flex items-center justify-center gap-2 font-bold text-sm cursor-pointer" id="label-delivery">
+            <input type="radio" name="order-type" value="Takeaway" checked onchange="updateDiningLabels()" class="accent-saffron"> Takeaway
+          </label>
+          <label class="border border-charcoal/20 p-2.5 rounded-xl flex items-center justify-center gap-2 font-bold text-sm cursor-pointer" id="label-dinein">
+            <input type="radio" name="order-type" value="Dine-in" onchange="updateDiningLabels()" class="accent-saffron"> Dine-In Feast
+          </label>
+        </div>
+      </div>
+
+      <!-- Pricing Summary -->
+      <div class="bg-cream/40 p-4 rounded-xl border border-charcoal/5 space-y-2 font-semibold">
+        <div class="flex justify-between text-sm text-gray-500">
+          <span>Subtotal:</span>
+          <span id="summary-subtotal">₹0</span>
+        </div>
+        <div class="flex justify-between text-sm text-gray-500">
+          <span>Taxes & packing:</span>
+          <span>₹0 (GST Included)</span>
+        </div>
+        <div class="flex justify-between text-lg font-black text-charcoal pt-2 border-t border-charcoal/10">
+          <span>Total Bill Amount:</span>
+          <span id="summary-total" class="text-saffron">₹0</span>
+        </div>
+      </div>
+
+      <!-- Order Now on WhatsApp Action Button -->
+      <button onclick="sendOrderToWhatsApp()" class="w-full bg-[#25D366] hover:bg-emerald-600 text-cream py-4 rounded-xl font-extrabold text-lg transition-all transform hover:scale-[1.01] flex items-center justify-center gap-2 shadow-xl animate-bounce">
+        <i class="ph ph-whatsapp-logo text-2xl"></i> Complete Order & Send Receipt
+      </button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="footer" class="relative bg-charcoal text-gray-400 pt-16 pb-28 px-6 md:px-12">
+    <div class="absolute top-0 left-0 w-full opacity-40">
+      <svg viewBox="0 0 100 10" preserveAspectRatio="none" class="w-full h-4">
+        <rect width="100" height="10" fill="url(#marigold-pattern)" />
+      </svg>
+    </div>
+
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+      <!-- LEFT Column -->
+      <div class="space-y-4">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-full bg-cream border border-saffron flex items-center justify-center shadow-md">
+            <span class="text-charcoal font-bold text-lg">KC</span>
+          </div>
+          <h4 class="text-cream font-bold text-xl">Kapoor's Cafe®</h4>
+        </div>
+        <p class="text-sm font-semibold">
+          Serving authentic, whole wheat, home-style vegetarian Punjabi cuisine since June 2014. Spices in our veins!
+        </p>
+        <div class="flex items-center gap-2 bg-black/40 px-3 py-1.5 rounded-full border border-gray-800 w-max">
+          <span class="w-3 h-3 rounded-full bg-deepGreen inline-block"></span>
+          <span class="text-cream text-xs font-semibold">100% Pure Vegetarian</span>
+        </div>
+      </div>
+
+      <!-- CENTER Column -->
+      <div class="space-y-4">
+        <h4 class="text-saffron font-bold text-lg">Quick Links</h4>
+        <ul class="space-y-2 text-sm font-semibold">
+          <li><a href="#story" class="hover:text-saffron transition-colors">Our Story</a></li>
+          <li><a href="#journey" class="hover:text-saffron transition-colors">Our Journey</a></li>
+          <li><a href="#menu" class="hover:text-saffron transition-colors">Menu</a></li>
+          <li><a href="#locations" class="hover:text-saffron transition-colors">Locations</a></li>
+          <li><a href="#franchise" class="hover:text-saffron transition-colors">Franchise</a></li>
+        </ul>
+      </div>
+
+      <!-- RIGHT Column -->
+      <div class="space-y-4">
+        <h4 class="text-saffron font-bold text-lg">Reach Us</h4>
+        <p class="text-sm font-semibold">Arpit Kapoor: <span class="text-cream">+91 97392 67702</span></p>
+        <p class="text-sm font-semibold">Operating across Bangalore, Mysore & Hyderabad.</p>
+        <div class="flex gap-4 pt-2">
+          <a href="https://wa.me/919739267702" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-[#25D366] text-cream hover:text-white flex items-center justify-center transition-colors">
+            <i class="ph ph-whatsapp-logo text-2xl"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="max-w-6xl mx-auto border-t border-gray-800 pt-8 text-center text-xs text-gray-500 font-bold uppercase tracking-wider">
+      <p>&copy; 2026 Kapoor's Cafe®. All Rights Reserved.</p>
+      <p class="mt-1">Authentic Punjabi Cuisine | Pure Veg Since 2014</p>
+    </div>
+  </footer>
+
+  <!-- Script Dependencies -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- Complete Menu Database and Interactive State Management -->
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Dynamic Menu Database containing the FULL parsed options
+    const menuData = {
+      drinks: [
+        { name: "Lime Soda", price: 80, jain: true },
+        { name: "Masala Cold-Drink", price: 90, jain: false },
+        { name: "Chaas (Butter Milk)", price: 100, jain: true },
+        { name: "Lassi", price: 120, jain: true },
+        { name: "Lassi Gur Wali", price: 140, jain: true },
+        { name: "Chaas Patiala Glass", price: 150, jain: true },
+        { name: "Lassi Patiala Glass", price: 180, jain: true },
+        { name: "Lassi Gur Patiala Glass", price: 200, jain: true },
+        { name: "Dry Fruit Lassi", price: 200, jain: true },
+        { name: "Dry Fruit Lassi Gur Wali", price: 220, jain: true },
+        { name: "Dry Fruit Lassi Patiala Glass", price: 260, jain: true },
+        { name: "Dry Fruit Lassi Patiala Gur Wali", price: 280, jain: true },
+        { name: "Maharaja Chaas", price: 300, tag: "New 👑", jain: true },
+        { name: "Maharaja Lassi", price: 360, tag: "New 👑", jain: true },
+        { name: "Maharaja Gur Lassi", price: 400, tag: "New 👑", jain: true },
+        { name: "Maharaja Dry Fruit Lassi", price: 520, tag: "New 👑", jain: true }
+      ],
+      kadaispl: [
+        { name: "Puri Aloo (4 pc)", price: 240, desc: "Served with Rase ke Aloo, Dilli ke Chatpate Aloo & Kheera Raita", jain: true },
+        { name: "Puri Chole (4 pc)", price: 240, desc: "Served with Mast Chole, Dilli ke Chatpate Aloo & Kheera Raita", jain: true },
+        { name: "Kachori (Bedmi) Aloo (4 pc)", price: 260, desc: "Served with Rase ke Aloo, Dilli ke Chatpate Aloo & Kheera Raita", jain: true },
+        { name: "Kachori (Bedmi) Chole (4 pc)", price: 260, desc: "Served with Mast Chole, Dilli ke Chatpate Aloo & Kheera Raita", jain: true },
+        { name: "Palak Wali Puri Aloo (4 pc)", price: 250, desc: "Served with Rase ke Aloo, Dilli ke Chatpate Aloo & Kheera Raita", jain: true },
+        { name: "Chole Kulcha (3 pc - Baked)", price: 240, desc: "Served with Chole & Kheera Raita", jain: true },
+        { name: "Pindi Chole Kulcha (3 pc - Baked)", price: 250, desc: "Served with Chole & Kheera Raita", jain: true },
+        { name: "Chole Bhature (2 pc)", price: 250, desc: "Served with Chole, Dry Aloo & Kheera Raita", jain: true },
+        { name: "Pindi Chole Bhature (2 pc)", price: 260, desc: "Served with Pindi Chole, Dry Aloo & Kheera Raita", jain: true },
+        { name: "Paneer Wale Bhature with Chole (2 pc)", price: 270, desc: "Served with Chole, Dry Aloo & Kheera Raita", jain: true },
+        { name: "Paneer Wale Bhature with Pindi Chole (2 pc)", price: 280, desc: "Served with Pindi Chole, Dry Aloo & Kheera Raita", jain: true }
+      ],
+      starters: [
+        { name: "Roasted Papad (Lijjat)", price: 30, jain: true },
+        { name: "Fried Papad (Lijjat)", price: 40, jain: true },
+        { name: "Masala Papad - Roasted", price: 60, jain: true },
+        { name: "Masala Papad - Fried", price: 70, jain: true },
+        { name: "Green Salad", price: 200, jain: true },
+        { name: "French Fries (Salted)", price: 220, jain: true },
+        { name: "Gobhi Pakora (8 pc)", price: 240, jain: true },
+        { name: "Pyaaz Pakora", price: 260, jain: false },
+        { name: "French Fries Punjabi Style", price: 270, jain: true },
+        { name: "Cheese Pataka Balls (10 pc)", price: 280, jain: true },
+        { name: "Crispy Cheesy Corn Salted", price: 290, jain: true },
+        { name: "Corn Cheese Rolls (8pc)", price: 300, jain: true },
+        { name: "Paneer Pakoras (8 pc)", price: 300, jain: true },
+        { name: "Harabhara Kebab Balls (8 pc)", price: 300, jain: true },
+        { name: "Kid's Special - Cheese Pakoras (8 Pc)", price: 320, tag: "Kids 🧒", jain: true },
+        { name: "Crispy Corn Punjabi Style", price: 320, jain: true },
+        { name: "Kapoor's Special Veg Kebab (4pc)", price: 330, jain: true },
+        { name: "Veg Seekh Kebab (6pc)", price: 330, jain: true },
+        { name: "Paneer Popcorn (8 pc)", price: 330, jain: true },
+        { name: "Dahi Kebab Stick (8 pc)", price: 340, jain: true },
+        { name: "Papdi Paneer Sticks (8 pc)", price: 350, jain: true },
+        { name: "Shami Kebab Stick (8 pc)", price: 360, jain: true },
+        { name: "Tawa Paneer Tikka (6pc)", price: 370, jain: true },
+        { name: "Paneer Cheese Sticks (8 pc)", price: 400, jain: true },
+        { name: "Cheesy Tawa Paneer Tikka (6 pc)", price: 420, jain: true },
+        { name: "Assorted Pakora Platter (12 pc)", price: 520, jain: true },
+        { name: "Special Paneer Pakore Platter (12 pc)", price: 560, jain: true }
+      ],
+      rotishoti: [
+        { category: "Whole Wheat Parathas", name: "Aloo Paratha", price: 140, jain: false },
+        { category: "Whole Wheat Parathas", name: "Aloo Pyaaz Paratha", price: 160, jain: false },
+        { category: "Whole Wheat Parathas", name: "Gobhi Paratha", price: 160, jain: true },
+        { category: "Whole Wheat Parathas", name: "Gobhi Pyaaz Paratha", price: 180, jain: false },
+        { category: "Whole Wheat Parathas", name: "Masala Besan Paratha (Spicy)", price: 180, jain: true },
+        { category: "Whole Wheat Parathas", name: "Onion Paratha", price: 180, jain: false },
+        { category: "Whole Wheat Parathas", name: "Mooli Paratha (Spicy)", price: 180, jain: true },
+        { category: "Whole Wheat Parathas", name: "Mix Paratha", price: 190, jain: true },
+        { category: "Whole Wheat Parathas", name: "Matar Paratha (Spicy)", price: 190, jain: true },
+        { category: "Whole Wheat Parathas", name: "Paneer Paratha", price: 220, jain: true },
+        { category: "Whole Wheat Parathas", name: "Paneer Pyaaz Paratha", price: 240, jain: false },
+        { category: "Whole Wheat Parathas", name: "Cheese Paratha", price: 320, jain: true },
+        { category: "Whole Wheat Parathas", name: "Cheese Burst Paratha", price: 380, jain: true },
+        { category: "Whole Wheat Parathas", name: "Kids Special Cheese PIZZA Paratha", price: 380, tag: "Kids 🧒", jain: true },
+        { category: "Whole Wheat Parathas", name: "White Butter", price: 90, jain: true },
+        { category: "Palak Parathas", name: "Palak Onion Paratha", price: 220, jain: false },
+        { category: "Palak Parathas", name: "Palak Paneer Paratha", price: 240, jain: true },
+        { category: "Palak Parathas", name: "Palak Matar Paratha", price: 240, jain: true },
+        { category: "Roti Shoti Breads", name: "Fulka Plain", price: 30, jain: true },
+        { category: "Roti Shoti Breads", name: "Fulka Desi Ghee", price: 40, jain: true },
+        { category: "Roti Shoti Breads", name: "Kulcha", price: 40, jain: true },
+        { category: "Roti Shoti Breads", name: "Missi Roti (Besan)", price: 70, jain: true },
+        { category: "Roti Shoti Breads", name: "Missi Roti Ghee (Besan)", price: 80, jain: true },
+        { category: "Roti Shoti Breads", name: "Plain Paratha", price: 90, jain: true },
+        { category: "Roti Shoti Breads", name: "Plain Laccha Roti", price: 90, jain: true },
+        { category: "Roti Shoti Breads", name: "Masala Laccha Roti (Spicy)", price: 100, jain: true },
+        { category: "Roti Shoti Breads", name: "Plain Laccha Paratha", price: 120, jain: true },
+        { category: "Roti Shoti Breads", name: "Aloo Chur Chur Paratha", price: 180, jain: false },
+        { category: "Roti Shoti Breads", name: "Pyaaz Chur Chur Paratha", price: 200, jain: false },
+        { category: "Roti Shoti Breads", name: "Paratha Bread Basket (4 Breads)", price: 530, jain: true },
+        { category: "Roti Shoti Breads", name: "Laccha Paratha Bread Basket", price: 550, jain: true }
+      ],
+      maincourse: [
+        { category: "Veg Gravy", name: "Aloo Jeera", price: 180, jain: true },
+        { category: "Veg Gravy", name: "Aloo Capsicum Dry", price: 200, jain: true },
+        { category: "Veg Gravy", name: "Aloo Gobhi Dry", price: 230, jain: true },
+        { category: "Veg Gravy", name: "Chatpate Aloo Dry", price: 230, jain: true },
+        { category: "Veg Gravy", name: "Kurkuri Bhindi", price: 250, jain: true },
+        { category: "Veg Gravy", name: "Aloo Gobhi Masala Gravy", price: 260, jain: true },
+        { category: "Veg Gravy", name: "Gobhi Masala Gravy", price: 270, jain: true },
+        { category: "Veg Gravy", name: "Rajma", price: 280, jain: true },
+        { category: "Veg Gravy", name: "Chole", price: 280, jain: true },
+        { category: "Veg Gravy", name: "Bhindi Masala Dry", price: 300, jain: true },
+        { category: "Veg Gravy", name: "Bhindi Pyaza", price: 300, jain: false },
+        { category: "Veg Gravy", name: "Punjabi Dum Aloo", price: 300, jain: true },
+        { category: "Veg Gravy", name: "Pindi Chole", price: 300, jain: true },
+        { category: "Veg Gravy", name: "Palak Corn", price: 300, jain: true },
+        { category: "Veg Gravy", name: "Mix Veg Dry", price: 320, jain: true },
+        { category: "Veg Gravy", name: "Vegetable Kofta (Spicy)", price: 320, jain: true },
+        { category: "Veg Gravy", name: "Veg Kadai (Spicy)", price: 320, jain: true },
+        { category: "Veg Gravy", name: "Veg Kolapuri (Spicy)", price: 320, jain: true },
+        { category: "Veg Gravy", name: "Baigan Bharta", price: 330, jain: false },
+        { category: "Veg Gravy", name: "Matar Mushroom", price: 330, jain: false },
+        { category: "Veg Gravy", name: "Mushroom Masala", price: 330, jain: false },
+        { category: "Veg Gravy", name: "Amritsari Kadai Aloo", price: 330, jain: true },
+        { category: "Veg Gravy", name: "Malai Kofta", price: 410, jain: true },
+        { category: "Veg Gravy", name: "Methi Matar Kaju Makhana", price: 450, jain: true },
+        { category: "Veg Gravy", name: "Sarso Da Saag with White Makkhan", price: 480, tag: "Winter Special ❄️", jain: true },
+        { category: "Veg Gravy", name: "Kaju Masala Gravy", price: 480, jain: true },
+        { category: "Paneer Dishes", name: "Matar Paneer", price: 340, jain: true },
+        { category: "Paneer Dishes", name: "Paneer Do Pyaaza", price: 350, jain: false },
+        { category: "Paneer Dishes", name: "Kadai Paneer (Spicy)", price: 350, jain: true },
+        { category: "Paneer Dishes", name: "Palak Paneer", price: 350, jain: true },
+        { category: "Paneer Dishes", name: "Paneer Butter Masala", price: 360, jain: true },
+        { category: "Paneer Dishes", name: "Punjabi Paneer Masala", price: 360, jain: true },
+        { category: "Paneer Dishes", name: "Paneer Lababdar", price: 380, jain: true },
+        { category: "Paneer Dishes", name: "Shahi Paneer", price: 400, jain: true },
+        { category: "Paneer Dishes", name: "Paneer Kolapuria", price: 400, jain: true },
+        { category: "Paneer Dishes", name: "Kalimirch Paneer", price: 410, jain: true },
+        { category: "Paneer Dishes", name: "Paneer Bhurji", price: 430, jain: true },
+        { category: "Paneer Dishes", name: "Paneer Degchi Delhiwala", price: 430, jain: true },
+        { category: "Paneer Dishes", name: "Paneer Tikka Masala", price: 430, tag: "New 🔥", jain: true },
+        { category: "Rice (Basmati)", name: "Plain Rice", price: 180, jain: true },
+        { category: "Rice (Basmati)", name: "Jeera Rice", price: 260, jain: true },
+        { category: "Rice (Basmati)", name: "Ghee Rice (Desi Ghee)", price: 280, jain: true },
+        { category: "Rice (Basmati)", name: "Onion Pulao", price: 300, jain: false },
+        { category: "Rice (Basmati)", name: "Chilli Onion Pulao", price: 300, jain: false },
+        { category: "Rice (Basmati)", name: "Matar Pulao", price: 300, jain: true },
+        { category: "Rice (Basmati)", name: "Paneer Pulao", price: 350, jain: true },
+        { category: "Rice (Basmati)", name: "Mushroom Onion Pulao", price: 350, jain: false },
+        { category: "Rice (Basmati)", name: "Veg Pulao", price: 360, jain: true },
+        { category: "Rice (Basmati)", name: "Shahi Pulao", price: 440, jain: true },
+        { category: "Dals", name: "Punjabi Dal Tadka (Channa)", price: 260, jain: true },
+        { category: "Dals", name: "Yellow Dal Tadka (Toor)", price: 280, jain: true },
+        { category: "Dals", name: "Dhabe Ki Dal", price: 300, jain: true },
+        { category: "Dals", name: "Kadhi (With Onion Pakora)", price: 320, jain: false },
+        { category: "Dals", name: "Dal Makhni", price: 400, jain: true }
+      ],
+      rajathali: [
+        { name: "Punjab Dal Combo", price: 300, desc: "Yellow Dal Tadka, Kurkuri Bhindi, Chatpate Aloo Dry, Kheera Raita, Jeera Rice, 2 Laccha Roti or 3 Ghee Fulka, Papad & Sweet Boondi", jain: true },
+        { name: "Punjab Kadhi Combo", price: 330, desc: "Punjabi Kadhi, Kurkuri Bhindi, Chatpate Aloo Dry, Kheera Raita, Jeera Rice, 2 Laccha Roti or 3 Ghee Fulka, Papad & Sweet Boondi", jain: false },
+        { name: "Rajma Combo", price: 330, desc: "Rajma, Toor Dal, Kurkuri Bhindi, Chatpate Aloo Dry, Kheera Raita, Jeera Rice, 2 Laccha Roti or 3 Ghee Fulka, Papad & Sweet Boondi", jain: true },
+        { name: "Chole Combo", price: 330, desc: "Chole, Toor Dal, Kurkuri Bhindi, Chatpate Aloo Dry, Kheera Raita, Jeera Rice, 2 Laccha Roti or 3 Ghee Fulka, Papad & Sweet Boondi", jain: true },
+        { name: "Veg Kadai Combo (Spicy)", price: 340, desc: "Veg Kadai, Toor Dal, Kurkuri Bhindi, Chatpate Aloo Dry, Kheera Raita, Jeera Rice, 2 Laccha Roti or 3 Ghee Fulka, Papad & Sweet Boondi", jain: true },
+        { name: "Chole Kulcha Combo (Baked)", price: 340, desc: "Chole, Aloo Jeera, 3 Kulcha, Kurkuri Bhindi, Chatpate Aloo Dry, Kheera Raita, Amul Butter, Papad & Sweet Boondi", jain: true },
+        { name: "Paneer Butter Masala Combo", price: 350, desc: "Paneer Butter Masala, Toor Dal, Kurkuri Bhindi, Chatpate Aloo Dry, Kheera Raita, Jeera Rice, 2 Laccha Roti or 3 Ghee Fulka, Papad & Sweet Boondi", jain: true },
+        { name: "Matar Paneer Combo", price: 350, desc: "Matar Paneer, Toor Dal, Kurkure Bhindi, Chatpate Aloo Dry, Kheera Raita, Jeera Rice, 2 Laccha Roti or 3 Ghee Fulka, Papad & Sweet Boondi", jain: true },
+        { name: "Amritsari Kadhai Aloo Combo", price: 350, desc: "Amritsari Kadhai Aloo, Toor Dal, Kurcure Bhindi, Chatpate Aloo Dry, Kheera Raita, Jeera Rice, 2 Laccha Roti or 3 Ghee Fulka, Papad & Sweet Boondi", jain: true },
+        { name: "Kadai Paneer Combo (Spicy)", price: 370, desc: "Kadai Paneer, Toor Dal, Kurcure Bhindi, Chatpate Aloo Dry, Kheera Raita, Jeera Rice, 2 Laccha Roti or 3 Ghee Fulka, Papad & Boondi", jain: true },
+        { name: "Mushroom Masala Combo", price: 370, desc: "Mushroom Masala, Toor Dal, Kurcure Bhindi, Chatpate Aloo Dry, Kheera Raita, Jeera Rice, 2 Laccha Roti or 3 Ghee Fulka, Papad & Sweet Boondi", jain: false },
+        { name: "Palak Paneer Combo", price: 380, desc: "Palak Paneer, Toor Dal, Kurcure Bhindi, Chatpate Aloo Dry, Kheera Raita, Jeera Rice, 2 Laccha Roti or 3 Ghee Fulka, Papad & Sweet Boondi", jain: true },
+        { name: "Dal Makhni Combo", price: 410, desc: "Dal Makhni, Kurcure Bhindi, Chatpate Aloo Dry, Kheera Raita, Jeera Rice, 2 Laccha Roti or 3 Ghee Fulka, Papad & Sweet Boondi", jain: true },
+        { name: "Shahi Paneer Combo", price: 450, desc: "Shahi Paneer, Toor Dal, Kurcure Bhindi, Chatpate Aloo Dry, Kheera Raita, Jeera Rice, 2 Laccha Roti or 3 Ghee Fulka, Papad & Sweet Boondi", jain: true },
+        { name: "Sarson Da Saag Combo", price: 470, tag: "Winter Special ❄️", desc: "Sarso Da Saag, 2 Makke De Parathe, Kurkuri Bhindi, Kheera Raita, White Makkhan & Sweet Boondi", jain: true }
+      ],
+      meetha: [
+        { category: "Desserts & Meetha", name: "Gulab Jamun (1 pc)", price: 90, desc: "Served In Sakora 🏺", jain: true },
+        { category: "Desserts & Meetha", name: "Gulab Jamun (2 pc)", price: 170, desc: "Served In Sakora 🏺", jain: true },
+        { category: "Desserts & Meetha", name: "Sweet Boondi", price: 100, desc: "Desi Ghee - Served In Sakora 🏺", jain: true },
+        { category: "Desserts & Meetha", name: "Gulab Jamun With Rabri (1 pc)", price: 140, desc: "Served In Sakora 🏺", jain: true },
+        { category: "Desserts & Meetha", name: "Rabri", price: 160, desc: "Served In Sakora 🏺", jain: true },
+        { category: "Desserts & Meetha", name: "Moong Dal Halwa", price: 160, desc: "Served In Sakora 🏺", jain: true },
+        { category: "Desserts & Meetha", name: "Fruit Cream", price: 160, desc: "Served In Sakora 🏺", jain: true },
+        { category: "Desserts & Meetha", name: "Chawal Ki Kheer", price: 160, desc: "Served In Sakora 🏺", jain: true },
+        { category: "Desserts & Meetha", name: "Sweet Boondi With Rabri", price: 180, desc: "Desi Ghee - Served In Sakora 🏺", jain: true },
+        { category: "Sakora Curd Items", name: "Sakore Wala Curd", price: 50, jain: true },
+        { category: "Sakora Curd Items", name: "Boondi Raita", price: 170, jain: true },
+        { category: "Sakora Curd Items", name: "Aloo Dhaniya Raita", price: 180, jain: true },
+        { category: "Sakora Curd Items", name: "Mix Raita", price: 190, jain: true },
+        { category: "Sakora Curd Items", name: "Kheera Raita", price: 200, jain: true }
+      ]
+    };
+
+    // State Variables for Dynamic Cart & Order Review
+    let cart = {}; 
+    let activeCategory = "drinks";
+    let activeFilter = "all";
+
+    // Dynamic Menu Card rendering (Prevents overlaps of title & price on all viewports)
+    function renderMenu() {
+      const grid = document.getElementById("menu-grid");
+      const searchVal = document.getElementById("menu-search").value.toLowerCase();
+      grid.innerHTML = "";
+
+      const items = menuData[activeCategory];
+      let lastCategory = "";
+
+      items.forEach((item) => {
+        if (searchVal && !item.name.toLowerCase().includes(searchVal)) {
+          return;
+        }
+        if (activeFilter === "jain" && !item.jain) {
+          return;
+        }
+
+        // Section Subheading Render logic
+        if (item.category && item.category !== lastCategory) {
+          lastCategory = item.category;
+          const sectionHeader = document.createElement("div");
+          sectionHeader.className = "col-span-full mt-6 mb-2 border-b-2 border-dashed border-saffron pb-1 text-chilliRed text-2xl font-black";
+          sectionHeader.innerHTML = `🌟 ${item.category}`;
+          grid.appendChild(sectionHeader);
+        }
+
+        const card = document.createElement("div");
+        card.className = "bg-white p-6 rounded-2xl shadow-md border-l-4 border-saffron flex flex-col justify-between transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl hover:border-chilliRed relative overflow-hidden";
+        
+        let tagBadgeHtml = item.tag ? `<span class="bg-saffron text-cream text-[10px] font-bold px-2 py-0.5 rounded-full inline-block whitespace-nowrap animate-pulse">${item.tag}</span>` : "";
+        let jainBadgeHtml = item.jain ? `<span class="bg-[#1B6B3A] text-cream text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 w-max"><span class="w-1.5 h-1.5 rounded-full bg-cream"></span> Jain Friendly</span>` : "";
+
+        // Standardise clean key names to prevent parsing errors
+        const unifiedId = item.name.replace(/[^a-zA-Z0-9]/g, '-');
+
+        card.innerHTML = `
+          <div class="space-y-2 flex-1">
+            <div class="flex justify-between items-start gap-4">
+              <div class="flex flex-col gap-1.5 flex-1 min-w-0">
+                <div class="flex flex-wrap items-center gap-1.5">
+                  <h4 class="text-charcoal font-black text-lg sm:text-xl leading-snug break-words">${item.name}</h4>
+                  ${tagBadgeHtml}
+                </div>
+                ${item.desc ? `<p class="text-xs text-gray-500 font-semibold italic">${item.desc}</p>` : ""}
+              </div>
+              <span class="text-saffron font-extrabold text-lg sm:text-xl whitespace-nowrap pt-0.5">₹${item.price}</span>
+            </div>
+          </div>
+          <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between gap-2">
+            ${jainBadgeHtml}
+            <!-- Unified Quantity Selector Controls -->
+            <div id="ctrl-${unifiedId}" class="flex-1 max-w-[120px]">
+              ${getCartQtyButtonHtml(item.name, item.price)}
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // Dynamic HTML Generator for Quantity selectors
+    function getCartQtyButtonHtml(itemName, price) {
+      const quantity = cart[itemName] ? cart[itemName].qty : 0;
+      if (quantity === 0) {
+        return `
+          <button onclick="updateCartItem('${itemName.replace(/'/g, "\\'")}', ${price}, 1)" class="w-full bg-saffron hover:bg-chilliRed text-cream text-xs font-bold py-1.5 px-3 rounded-lg flex items-center justify-center gap-1 transition-colors">
+            <i class="ph ph-plus-circle text-sm"></i> Add
+          </button>
+        `;
+      } else {
+        return `
+          <div class="flex items-center justify-between bg-saffron rounded-lg text-cream p-1 font-bold">
+            <button onclick="updateCartItem('${itemName.replace(/'/g, "\\'")}', ${price}, -1)" class="hover:bg-chilliRed/30 px-2 rounded font-black">-</button>
+            <span class="text-sm">${quantity}</span>
+            <button onclick="updateCartItem('${itemName.replace(/'/g, "\\'")}', ${price}, 1)" class="hover:bg-chilliRed/30 px-2 rounded font-black">+</button>
+          </div>
+        `;
+      }
+    }
+
+    // Global Interactive Cart State Modifier (Syncs menu cards and Maharaja Thali spotlights instantly!)
+    function updateCartItem(itemName, price, delta) {
+      if (!cart[itemName]) {
+        cart[itemName] = { price: price, qty: 0 };
+      }
+      cart[itemName].qty += delta;
+
+      if (cart[itemName].qty <= 0) {
+        delete cart[itemName];
+      }
+
+      // Update UI elements dynamically across both Menu Card and Maharaja spotlight cards
+      const unifiedId = itemName.replace(/[^a-zA-Z0-9]/g, '-');
+      const targetElement = document.getElementById(`ctrl-${unifiedId}`);
+      if (targetElement) {
+        targetElement.innerHTML = getCartQtyButtonHtml(itemName, price);
+      }
+
+      updateCartStickyBar();
+      updateCartDrawerItems();
+    }
+
+    // Updates state of the Sticky Cart view overlay (safely moves floating elements to avoid overlaps)
+    function updateCartStickyBar() {
+      const bar = document.getElementById("cart-sticky-bar");
+      const badge = document.getElementById("cart-badge");
+      const summary = document.getElementById("cart-summary");
+      const waFloat = document.getElementById("whatsapp-float");
+
+      let totalItems = 0;
+      let totalPrice = 0;
+
+      for (const item in cart) {
+        totalItems += cart[item].qty;
+        totalPrice += (cart[item].qty * cart[item].price);
+      }
+
+      if (totalItems > 0) {
+        bar.classList.remove("translate-y-full");
+        badge.innerText = totalItems;
+        summary.innerHTML = `${totalItems} Dishes Selected &bull; <span class="text-turmeric text-xl font-black">₹${totalPrice}</span>`;
+        
+        // Dynamically adjust floating whatsapp button up to avoid covering cart sticky bar on mobile
+        if (waFloat) {
+          waFloat.classList.remove("bottom-6");
+          waFloat.classList.add("bottom-28");
+        }
+      } else {
+        bar.classList.add("translate-y-full");
+        
+        // Return WhatsApp float to comfortable base position
+        if (waFloat) {
+          waFloat.classList.remove("bottom-28");
+          waFloat.classList.add("bottom-6");
+        }
+      }
+
+      // Sync checkout totals inside checkout modal
+      document.getElementById("summary-subtotal").innerText = `₹${totalPrice}`;
+      document.getElementById("summary-total").innerText = `₹${totalPrice}`;
+    }
+
+    // Dynamically populates the side cart review items drawer
+    function updateCartDrawerItems() {
+      const drawerContainer = document.getElementById("cart-drawer-items");
+      drawerContainer.innerHTML = "";
+
+      let totalItems = 0;
+      for (const itemName in cart) {
+        totalItems++;
+        const item = cart[itemName];
+        const row = document.createElement("div");
+        row.className = "bg-white p-4 rounded-xl shadow-sm border border-charcoal/5 flex items-center justify-between gap-4 font-semibold";
+        row.innerHTML = `
+          <div class="flex-1">
+            <h5 class="text-charcoal font-bold text-base leading-snug break-words">${itemName}</h5>
+            <span class="text-xs text-saffron">₹${item.price} each</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <button onclick="updateCartItem('${itemName.replace(/'/g, "\\'")}', ${item.price}, -1)" class="w-8 h-8 rounded-full bg-saffron/10 hover:bg-saffron text-saffron hover:text-cream flex items-center justify-center transition-colors">
+              <i class="ph ph-minus"></i>
+            </button>
+            <span class="text-base font-black text-charcoal w-4 text-center">${item.qty}</span>
+            <button onclick="updateCartItem('${itemName.replace(/'/g, "\\'")}', ${item.price}, 1)" class="w-8 h-8 rounded-full bg-saffron/10 hover:bg-saffron text-saffron hover:text-cream flex items-center justify-center transition-colors">
+              <i class="ph ph-plus"></i>
+            </button>
+          </div>
+          <div class="text-right pl-2">
+            <span class="text-charcoal font-black text-base">₹${item.qty * item.price}</span>
+          </div>
+        `;
+        drawerContainer.appendChild(row);
+      }
+
+      if (totalItems === 0) {
+        drawerContainer.innerHTML = `
+          <div class="flex flex-col items-center justify-center h-full text-center p-8 space-y-4">
+            <div class="w-20 h-20 rounded-full bg-saffron/10 flex items-center justify-center text-saffron">
+              <i class="ph ph-shopping-cart text-5xl"></i>
+            </div>
+            <h4 class="text-xl font-bold text-charcoal">Your Cart is Empty!</h4>
+            <p class="text-sm text-gray-500 font-semibold max-w-xs">Add some mouthwatering Punjabi dishes from the menu to build your order.</p>
+            <button onclick="toggleCartDrawer(false)" class="bg-saffron text-cream px-6 py-2.5 rounded-full font-bold shadow-lg">Start Selecting</button>
+          </div>
+        `;
+      }
+    }
+
+    function toggleCartDrawer(open) {
+      const drawer = document.getElementById("cart-drawer");
+      const overlay = document.getElementById("cart-drawer-overlay");
+
+      if (open) {
+        overlay.classList.remove("hidden");
+        setTimeout(() => overlay.classList.add("opacity-100"), 10);
+        drawer.classList.remove("translate-x-full");
+      } else {
+        overlay.classList.remove("opacity-100");
+        setTimeout(() => overlay.classList.add("hidden"), 300);
+        drawer.classList.add("translate-x-full");
+      }
+    }
+
+    function updateDiningLabels() {
+      const isDineIn = document.querySelector('input[name="order-type"]:checked').value === "Dine-in";
+      const dineInLabel = document.getElementById("label-dinein");
+      const deliveryLabel = document.getElementById("label-delivery");
+
+      if (isDineIn) {
+        dineInLabel.className = "border-2 border-saffron bg-cream p-2.5 rounded-xl flex items-center justify-center gap-2 font-bold text-sm cursor-pointer";
+        deliveryLabel.className = "border border-charcoal/20 p-2.5 rounded-xl flex items-center justify-center gap-2 font-bold text-sm cursor-pointer";
+      } else {
+        deliveryLabel.className = "border-2 border-saffron bg-cream p-2.5 rounded-xl flex items-center justify-center gap-2 font-bold text-sm cursor-pointer";
+        dineInLabel.className = "border border-charcoal/20 p-2.5 rounded-xl flex items-center justify-center gap-2 font-bold text-sm cursor-pointer";
+      }
+    }
+
+    // Direct WhatsApp Invoice Sender (compiles every selected item and quantities!)
+    // Emojis are removed inside this dynamic message builder to completely prevent encoding '' issues on users' devices.
+    function sendOrderToWhatsApp() {
+      let totalAmount = 0;
+      let orderListText = "";
+
+      for (const itemName in cart) {
+        const item = cart[itemName];
+        const lineTotal = item.qty * item.price;
+        totalAmount += lineTotal;
+        orderListText += `• ${item.qty} x ${itemName} (Rs.${item.price}) = Rs.${lineTotal}\n`;
+      }
+
+      if (totalAmount === 0) {
+        alert("Please add at least 1 item to your cart before checking out!");
+        return;
+      }
+
+      const instruction = document.getElementById("cart-instruction").value.trim();
+      const diningType = document.querySelector('input[name="order-type"]:checked').value;
+
+      // Premium Formatted Text Receipt (Web-safe, without high UTF-8 emojis that turn into  marks)
+      let invoiceMsg = `*KAPOOR'S CAFE ONLINE ORDER*\n`;
+      invoiceMsg += `----------------------------------\n`;
+      invoiceMsg += `*Order Type:* ${diningType}\n`;
+      invoiceMsg += `----------------------------------\n`;
+      invoiceMsg += `*Items Ordered:*\n${orderListText}\n`;
+      invoiceMsg += `----------------------------------\n`;
+      if (instruction) {
+        invoiceMsg += `*Special Instructions:* ${instruction}\n`;
+        invoiceMsg += `----------------------------------\n`;
+      }
+      invoiceMsg += `*Total Bill Amount:* *Rs.${totalAmount}*\n`;
+      invoiceMsg += `----------------------------------\n`;
+      invoiceMsg += `Sent from Kapoor's Cafe Online Portal.\nPlease confirm my order!`;
+
+      // Redirect directly to WhatsApp with pre-filled message
+      const whatsappUrl = `https://wa.me/919739267702?text=${encodeURIComponent(invoiceMsg)}`;
+      window.open(whatsappUrl, "_blank");
+    }
+
+    function switchTab(category) {
+      activeCategory = category;
+      document.querySelectorAll(".menu-tab-btn").forEach(btn => {
+        btn.classList.remove("active", "bg-saffron", "text-cream");
+        btn.classList.add("bg-cream", "text-charcoal", "border-charcoal/30");
+      });
+      const activeBtn = document.getElementById(`tab-${category}`);
+      activeBtn.classList.remove("bg-cream", "text-charcoal", "border-charcoal/30");
+      activeBtn.classList.add("active", "bg-saffron", "text-cream");
+      renderMenu();
+    }
+
+    function filterMenu() {
+      renderMenu();
+    }
+
+    function setVegFilter(filter) {
+      activeFilter = filter;
+      document.querySelectorAll(".filter-btn").forEach(btn => {
+        btn.classList.remove("active", "bg-charcoal", "text-cream");
+        btn.classList.add("bg-white", "text-charcoal", "border-charcoal/20");
+      });
+      const activeBtn = document.getElementById(`filter-${filter}`);
+      activeBtn.classList.remove("bg-white", "text-charcoal", "border-charcoal/20");
+      activeBtn.classList.add("active", "bg-charcoal", "text-cream");
+      renderMenu();
+    }
+
+    // Responsive Mobile Hamburger overlay toggle
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const hamburger = document.getElementById("hamburger");
+
+    menuBtn.addEventListener("click", () => {
+      const isOpened = mobileMenu.classList.contains("translate-x-0");
+      if (isOpened) {
+        mobileMenu.classList.remove("translate-x-0");
+        mobileMenu.classList.add("translate-x-full");
+        hamburger.children[0].classList.remove("rotate-45", "translate-y-2");
+        hamburger.children[1].classList.remove("opacity-0");
+        hamburger.children[2].classList.remove("-rotate-45", "-translate-y-2");
+      } else {
+        mobileMenu.classList.remove("translate-x-full");
+        mobileMenu.classList.add("translate-x-0");
+        hamburger.children[0].classList.add("rotate-45", "translate-y-2");
+        hamburger.children[1].classList.add("opacity-0");
+        hamburger.children[2].classList.add("-rotate-45", "-translate-y-2");
+      }
+    });
+
+    document.querySelectorAll(".mobile-nav-link").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("translate-x-0");
+        mobileMenu.classList.add("translate-x-full");
+        hamburger.children[0].classList.remove("rotate-45", "translate-y-2");
+        hamburger.children[1].classList.remove("opacity-0");
+        hamburger.children[2].classList.remove("-rotate-45", "-translate-y-2");
+      });
+    });
+
+    window.addEventListener("scroll", () => {
+      const nav = document.getElementById("navbar");
+      if (window.scrollY > 80) {
+        nav.classList.add("bg-[#FF6B00]/95", "backdrop-blur-md", "shadow-xl", "py-2");
+        nav.classList.remove("py-4");
+      } else {
+        nav.classList.remove("bg-[#FF6B00]/95", "backdrop-blur-md", "shadow-xl", "py-2");
+        nav.classList.add("py-4");
+      }
+    });
+
+    // Three.js Scene Setup (Layer 1 Floating Spices)
+    let scene, camera, renderer, particles = [];
+    function initThreeSpiceParticles() {
+      const container = document.getElementById('three-canvas-container');
+      if (!container) return;
+
+      scene = new THREE.Scene();
+      camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+      renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+      renderer.setSize(container.clientWidth, container.clientHeight);
+      container.appendChild(renderer.domElement);
+
+      const colors = [0xFF6B00, 0xFFB800, 0xC0392B];
+      for (let i = 0; i < 80; i++) {
+        const geometry = new THREE.IcosahedronGeometry(Math.random() * 0.08 + 0.04, 0);
+        const material = new THREE.MeshBasicMaterial({
+          color: colors[Math.floor(Math.random() * colors.length)],
+          transparent: true,
+          opacity: 0.75
+        });
+        const mesh = new THREE.Mesh(geometry, material);
+        mesh.position.set(
+          (Math.random() - 0.5) * 8,
+          (Math.random() - 0.5) * 6,
+          (Math.random() - 0.5) * 4
+        );
+        mesh.userData = {
+          speedY: Math.random() * 0.006 + 0.002,
+          rotSpeedX: Math.random() * 0.03,
+          rotSpeedY: Math.random() * 0.03
+        };
+        scene.add(mesh);
+        particles.push(mesh);
+      }
+      camera.position.z = 5;
+
+      function renderLoop() {
+        requestAnimationFrame(renderLoop);
+        particles.forEach(p => {
+          p.position.y += p.userData.speedY;
+          p.rotation.x += p.userData.rotSpeedX;
+          p.rotation.y += p.userData.rotSpeedY;
+          if (p.position.y > 4) {
+            p.position.y = -4;
+            p.position.x = (Math.random() - 0.5) * 8;
+          }
+        });
+        renderer.render(scene, camera);
+      }
+      renderLoop();
+
+      window.addEventListener('resize', () => {
+        camera.aspect = container.clientWidth / container.clientHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(container.clientWidth, container.clientHeight);
+      });
+    }
+
+    // GSAP Orchestration & Window Loaded Operations
+    window.addEventListener("load", () => {
+      initThreeSpiceParticles();
+      renderMenu();
+
+      const tl = gsap.timeline();
+      tl.from("#hero-badge", {
+        y: -150,
+        opacity: 0,
+        scale: 0.5,
+        duration: 1.2,
+        ease: "bounce.out"
+      })
+      .from("#hero-title", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out"
+      }, "-=0.6")
+      .from("#hero-subtitle, #hero-tagline", {
+        y: 30,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.2,
+        ease: "power2.out"
+      }, "-=0.4")
+      .from("#hero-ctas", {
+        y: 20,
+        opacity: 0,
+        duration: 0.5,
+        ease: "power2.out"
+      }, "-=0.2");
+
+      gsap.from(".timeline-item", {
+        scrollTrigger: {
+          trigger: "#story",
+          start: "top 75%",
+          toggleActions: "play none none none"
+        },
+        x: -50,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.25,
+        ease: "power3.out"
+      });
+
+      gsap.from(".journey-item", {
+        scrollTrigger: {
+          trigger: "#journey",
+          start: "top 75%",
+          toggleActions: "play none none none"
+        },
+        scale: 0.8,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.2,
+        ease: "power2.out"
+      });
+
+      gsap.from("#neon-warning-card", {
+        scrollTrigger: {
+          trigger: "#warning",
+          start: "top 80%",
+          toggleActions: "play none none none"
+        },
+        scale: 0.4,
+        opacity: 0,
+        duration: 1.2,
+        ease: "elastic.out(1, 0.5)"
+      });
+
+      ScrollTrigger.refresh();
+    });
+  </script>
+</body>
+</html>
