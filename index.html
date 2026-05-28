@@ -193,18 +193,6 @@
     </div>
   </nav>
 
-  <!-- FLOATING WHATSAPP BUTTON (GLOBAL) -->
-  <a href="https://wa.me/919739267702?text=Hi%20Kapoor's%20Cafe!%20I'd%20like%20to%20place%20an%20order." target="_blank" id="whatsapp-float" class="fixed bottom-6 right-6 z-[9990] flex items-center group transition-all duration-300">
-    <span class="mr-3 bg-charcoal text-cream text-sm font-semibold py-2 px-4 rounded-full shadow-xl opacity-0 transform translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 pointer-events-none whitespace-nowrap">
-      Order on WhatsApp 🛒
-    </span>
-    <div class="w-16 h-16 rounded-full bg-[#25D366] wa-pulse hover:scale-112 flex items-center justify-center shadow-[0_4px_20px_rgba(37,211,102,0.5)] transition-all duration-300">
-      <svg class="w-9 h-9 fill-white" viewBox="0 0 24 24">
-        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.967C16.528 1.973 14.07 1.1 11.493 1.1 6.059 1.1 1.634 5.471 1.63 10.9c-.002 1.737.457 3.432 1.328 4.911l-.973 3.555 3.644-.949c1.472.8 3.1 1.22 4.418 1.22zM17.15 14.39c-.312-.156-1.848-.91-2.131-1.013-.283-.104-.49-.156-.696.156-.206.312-.797 1.013-.977 1.216-.18.203-.36.23-.672.074-1.343-.672-2.164-1.12-3.011-2.584-.223-.385.223-.357.639-1.189.069-.14.034-.262-.017-.365-.052-.104-.49-1.18-.671-1.616-.176-.425-.37-.365-.508-.372l-.433-.008c-.15 0-.395.056-.601.28-.206.223-.788.771-.788 1.88 0 1.11.806 2.183.918 2.336.112.152 1.587 2.424 3.844 3.399.536.232.955.371 1.282.476.54.172 1.03.148 1.417.09.432-.065 1.329-.544 1.514-1.043.185-.5.185-.929.13-1.013-.056-.085-.206-.13-.518-.286z"/>
-      </svg>
-    </div>
-  </a>
-
   <!-- SECTION 1: HERO (id="hero") -->
   <section id="hero" class="relative min-h-screen w-full flex flex-col justify-center items-center overflow-hidden noise-overlay select-none bg-gradient-to-b from-saffron to-turmeric py-20">
     <div id="three-canvas-container" class="absolute inset-0 z-0 pointer-events-none"></div>
@@ -597,7 +585,7 @@
       <p class="punjabi-handwritten text-turmeric text-3xl mt-2">Wah Ji Wah &bull; Select directly to add to your order! 👑</p>
     </div>
 
-    <!-- Thali Grid (No details hiding, no blurry truncation, fully responsive and clear) -->
+    <!-- Thali Grid -->
     <div id="maharaja-grid" class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
       <!-- Thali Card 1 -->
       <div class="bg-cream text-charcoal border-4 border-turmeric rounded-2xl p-6 shadow-2xl relative flex flex-col justify-between transform hover:scale-[1.02] transition-all duration-300">
@@ -713,7 +701,7 @@
       <!-- Thali Card 6 -->
       <div class="bg-cream text-charcoal border-4 border-turmeric rounded-2xl p-6 shadow-2xl relative flex flex-col justify-between transform hover:scale-[1.02] transition-all duration-300">
         <div>
-          <span class="bg-[#1B6B3A] text-cream text-xs font-bold px-3 py-1 rounded-full uppercase inline-block mb-3">Winter Special ❄️</span>
+          <span class="bg-[#1B6B3A] text-cream text-xs font-bold px-3 py-1 rounded-full uppercase inline-block mb-3">Winters Special ❄️</span>
           <h3 class="text-2xl font-black text-charcoal mb-2">Winters Maharaja Thali 👑</h3>
           <p class="text-sm text-gray-700 leading-relaxed font-semibold mb-6">
             Sarso Da Saag, 3 Makke de Parathay, Dilli ke Chatpate Aloo, 2 Pcs Corn Cheese Roll, 2Pcs Papdi Paneer, Kheera Raita, Curd, White Butter 2 Pc, Roasted Papad, Chaas, Lassi, Moong Dal Halwa, Gur, Salad, Pickle & Chutney.
@@ -798,7 +786,7 @@
             <h3 class="text-2xl font-black">Bangalore 🏙️</h3>
             <p class="text-xs font-semibold uppercase tracking-wider mt-1">11 Beautiful Branches</p>
           </div>
-          <div class="p-6 space-y-4 text-charcoal font-semibold max-h-80 overflow-y-auto">
+          <div class="p-6 space-y-4 text-charcoal font-semibold max-h-80 overflow-y-auto animate-fade-in">
             <div class="flex items-center gap-3 border-b border-gray-100 pb-2"><span class="text-xl">📍</span> Whitefield</div>
             <div class="flex items-center gap-3 border-b border-gray-100 pb-2"><span class="text-xl">📍</span> HSR Layout</div>
             <div class="flex items-center gap-3 border-b border-gray-100 pb-2"><span class="text-xl">📍</span> Kalyan Nagar</div>
@@ -810,6 +798,35 @@
             <div class="flex items-center gap-3 border-b border-gray-100 pb-2"><span class="text-xl">📍</span> KR Puram</div>
             <div class="flex items-center gap-3 border-b border-gray-100 pb-2"><span class="text-xl">📍</span> Yelahanka</div>
             <div class="flex items-center gap-3 border-b border-gray-100 pb-2"><span class="text-xl">📍</span> Hennur</div>
+          </div>
+          <!-- Zomato & Swiggy Order Online Segment (UPGRADE 5) -->
+          <div class="px-6 pb-6">
+            <div class="mt-4 pt-4 border-t border-charcoal/10">
+              <p class="text-xs font-bold text-charcoal/40 uppercase tracking-wider mb-2">Also Order Online Via</p>
+              <div class="flex gap-2 flex-wrap">
+                <a href="https://www.zomato.com/search?q=Kapoor%27s+Cafe" 
+                   target="_blank" rel="noopener"
+                   class="flex items-center gap-1.5 px-3 py-1.5 
+                          rounded-full border border-[#E23744]/40 
+                          text-[#E23744] text-xs font-bold 
+                          hover:bg-[#E23744] hover:text-white 
+                          transition-all duration-200">
+                  🍽️ Zomato
+                </a>
+                <a href="https://www.swiggy.com/search?query=Kapoor%27s+Cafe" 
+                   target="_blank" rel="noopener"
+                   class="flex items-center gap-1.5 px-3 py-1.5 
+                          rounded-full border border-[#FC8019]/40 
+                          text-[#FC8019] text-xs font-bold 
+                          hover:bg-[#FC8019] hover:text-white 
+                          transition-all duration-200">
+                  🛵 Swiggy
+                </a>
+              </div>
+              <p class="text-[11px] text-charcoal/35 font-medium mt-1.5 italic">
+                Direct WhatsApp ordering recommended 💬
+              </p>
+            </div>
           </div>
         </div>
         <div class="bg-gray-50 py-4 text-center font-bold text-saffron border-t border-gray-100">Our Home City</div>
@@ -826,6 +843,35 @@
             <div class="flex items-center gap-3 border-b border-gray-100 pb-2"><span class="text-xl">📍</span> Kalidasa Road</div>
             <div class="flex items-center gap-3 border-b border-gray-100 pb-2"><span class="text-xl">📍</span> Sharda Devi Nagar</div>
           </div>
+          <!-- Zomato & Swiggy Order Online Segment (UPGRADE 5) -->
+          <div class="px-6 pb-6">
+            <div class="mt-4 pt-4 border-t border-charcoal/10">
+              <p class="text-xs font-bold text-charcoal/40 uppercase tracking-wider mb-2">Also Order Online Via</p>
+              <div class="flex gap-2 flex-wrap">
+                <a href="https://www.zomato.com/search?q=Kapoor%27s+Cafe" 
+                   target="_blank" rel="noopener"
+                   class="flex items-center gap-1.5 px-3 py-1.5 
+                          rounded-full border border-[#E23744]/40 
+                          text-[#E23744] text-xs font-bold 
+                          hover:bg-[#E23744] hover:text-white 
+                          transition-all duration-200">
+                  🍽️ Zomato
+                </a>
+                <a href="https://www.swiggy.com/search?query=Kapoor%27s+Cafe" 
+                   target="_blank" rel="noopener"
+                   class="flex items-center gap-1.5 px-3 py-1.5 
+                          rounded-full border border-[#FC8019]/40 
+                          text-[#FC8019] text-xs font-bold 
+                          hover:bg-[#FC8019] hover:text-white 
+                          transition-all duration-200">
+                  🛵 Swiggy
+                </a>
+              </div>
+              <p class="text-[11px] text-charcoal/35 font-medium mt-1.5 italic">
+                Direct WhatsApp ordering recommended 💬
+              </p>
+            </div>
+          </div>
         </div>
         <div class="bg-gray-50 py-4 text-center font-bold text-saffron border-t border-gray-100">Heritage Culture</div>
       </div>
@@ -840,6 +886,35 @@
           <div class="p-6 space-y-4 text-charcoal font-semibold">
             <div class="flex items-center gap-3 border-b border-gray-100 pb-2"><span class="text-xl">📍</span> Banjara Hills</div>
             <div class="flex items-center gap-3 border-b border-gray-100 pb-2"><span class="text-xl">📍</span> Hitex</div>
+          </div>
+          <!-- Zomato & Swiggy Order Online Segment (UPGRADE 5) -->
+          <div class="px-6 pb-6">
+            <div class="mt-4 pt-4 border-t border-charcoal/10">
+              <p class="text-xs font-bold text-charcoal/40 uppercase tracking-wider mb-2">Also Order Online Via</p>
+              <div class="flex gap-2 flex-wrap">
+                <a href="https://www.zomato.com/search?q=Kapoor%27s+Cafe" 
+                   target="_blank" rel="noopener"
+                   class="flex items-center gap-1.5 px-3 py-1.5 
+                          rounded-full border border-[#E23744]/40 
+                          text-[#E23744] text-xs font-bold 
+                          hover:bg-[#E23744] hover:text-white 
+                          transition-all duration-200">
+                  🍽️ Zomato
+                </a>
+                <a href="https://www.swiggy.com/search?query=Kapoor%27s+Cafe" 
+                   target="_blank" rel="noopener"
+                   class="flex items-center gap-1.5 px-3 py-1.5 
+                          rounded-full border border-[#FC8019]/40 
+                          text-[#FC8019] text-xs font-bold 
+                          hover:bg-[#FC8019] hover:text-white 
+                          transition-all duration-200">
+                  🛵 Swiggy
+                </a>
+              </div>
+              <p class="text-[11px] text-charcoal/35 font-medium mt-1.5 italic">
+                Direct WhatsApp ordering recommended 💬
+              </p>
+            </div>
           </div>
         </div>
         <div class="bg-gray-50 py-4 text-center font-bold text-saffron border-t border-gray-100">Rich Nizami Love</div>
@@ -877,12 +952,12 @@
         Become a proud partner of Bangalore, Mysore & Hyderabad's favorite pure vegetarian Punjabi chain. Grow your business and secure success with Kapoor Aunty's legendary home-style recipes.
       </p>
 
-      <!-- Two Contact Options -->
+      <!-- Two Contact Options (UPGRADE 6 on WhatsApp button) -->
       <div class="flex flex-col sm:flex-row gap-6 justify-center max-w-lg mx-auto">
-        <a href="https://wa.me/919739267702?text=Hi!%20I'm%20interested%20in%20a%20Kapoor's%20Cafe%20Franchise" target="_blank" class="bg-[#25D366] hover:bg-emerald-600 border-2 border-emerald-500 hover:scale-105 transition-all text-cream py-4 px-8 rounded-full font-bold text-lg flex items-center justify-center gap-3 shadow-2xl">
+        <button onclick="openBranchModal(); return false;" class="bg-[#25D366] hover:bg-emerald-600 border-2 border-emerald-500 hover:scale-105 transition-all text-cream py-4 px-8 rounded-full font-bold text-lg flex items-center justify-center gap-3 shadow-2xl focus:outline-none">
           <i class="ph ph-whatsapp-logo text-2xl"></i>
           Chat on WhatsApp
-        </a>
+        </button>
         <a href="tel:+919739267702" class="bg-transparent hover:bg-cream hover:text-charcoal border-2 border-cream hover:scale-105 transition-all text-cream py-4 px-8 rounded-full font-bold text-lg flex items-center justify-center gap-3 shadow-2xl">
           📞 Call Arpit Kapoor
         </a>
@@ -1032,6 +1107,90 @@
       <p class="mt-1">Authentic Punjabi Cuisine | Pure Veg Since 2014</p>
     </div>
   </footer>
+
+  <!-- BRANCH SELECTOR MODAL (UPGRADE 2 - Removed "hidden" as part of FIX 1) -->
+  <div id="branch-modal-overlay" 
+    class="fixed inset-0 bg-black/70 z-[9998] items-center 
+           justify-center p-4 backdrop-blur-sm"
+    style="display:none">
+    
+    <div class="bg-cream rounded-2xl w-full max-w-md shadow-2xl 
+                border-4 border-saffron overflow-hidden">
+      
+      <!-- Modal Header -->
+      <div class="bg-saffron px-6 py-4 flex items-center justify-between">
+        <div>
+          <h3 class="text-cream font-black text-xl"
+              style="font-family:'Tiro Devanagari Hindi',serif">
+            Select Your Branch
+          </h3>
+          <p class="text-cream/80 text-sm font-semibold mt-0.5">
+            Order goes to your nearest Kapoor's Cafe
+          </p>
+        </div>
+        <button onclick="closeBranchModal()" 
+          class="text-cream hover:bg-charcoal/20 p-2 rounded-full 
+                 transition-colors text-xl font-black">✕</button>
+      </div>
+
+      <!-- City Tabs -->
+      <div class="flex border-b-2 border-saffron/20 bg-white">
+        <button onclick="switchCityTab('Bangalore')" 
+          id="city-tab-Bangalore"
+          class="city-tab flex-1 py-3 text-sm font-bold 
+                 transition-all border-b-3 
+                 bg-saffron text-cream">
+          🏙️ Bangalore
+        </button>
+        <button onclick="switchCityTab('Mysore')" 
+          id="city-tab-Mysore"
+          class="city-tab flex-1 py-3 text-sm font-bold 
+                 transition-all text-charcoal hover:bg-saffron/10">
+          🏛️ Mysore
+        </button>
+        <button onclick="switchCityTab('Hyderabad')" 
+          id="city-tab-Hyderabad"
+          class="city-tab flex-1 py-3 text-sm font-bold 
+                 transition-all text-charcoal hover:bg-saffron/10">
+          🕌 Hyderabad
+        </button>
+      </div>
+
+      <!-- Branch List -->
+      <div id="branch-list" 
+        class="p-4 grid grid-cols-2 gap-3 max-h-64 overflow-y-auto">
+        <!-- Dynamically filled by JS -->
+      </div>
+
+      <!-- Confirm Button -->
+      <div class="px-4 pb-4">
+        <button onclick="confirmBranchAndOrder()" 
+          id="confirm-branch-btn"
+          class="w-full bg-[#25D366] text-cream py-3.5 rounded-xl 
+                 font-extrabold text-base flex items-center 
+                 justify-center gap-2 opacity-50 cursor-not-allowed
+                 transition-all">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Select a branch first
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FLOATING WHATSAPP BUTTON (GLOBAL - UPGRADE 6) -->
+  <button onclick="openBranchModal(); return false;" id="whatsapp-float" class="fixed bottom-6 right-6 z-[9990] flex items-center group transition-all duration-300 focus:outline-none">
+    <span class="mr-3 bg-charcoal text-cream text-sm font-semibold py-2 px-4 rounded-full shadow-xl opacity-0 transform translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 pointer-events-none whitespace-nowrap">
+      Order on WhatsApp 🛒
+    </span>
+    <div class="w-16 h-16 rounded-full bg-[#25D366] wa-pulse hover:scale-112 flex items-center justify-center shadow-[0_4px_20px_rgba(37,211,102,0.5)] transition-all duration-300">
+      <svg class="w-9 h-9 fill-white" viewBox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.967C16.528 1.973 14.07 1.1 11.493 1.1 6.059 1.1 1.634 5.471 1.63 10.9c-.002 1.737.457 3.432 1.328 4.911l-.973 3.555 3.644-.949c1.472.8 3.1 1.22 4.418 1.22zM17.15 14.39c-.312-.156-1.848-.91-2.131-1.013-.283-.104-.49-.156-.696.156-.206.312-.797 1.013-.977 1.216-.18.203-.36.23-.672.074-1.343-.672-2.164-1.12-3.011-2.584-.223-.385.223-.357.639-1.189.069-.14.034-.262-.017-.365-.052-.104-.49-1.18-.671-1.616-.176-.425-.37-.365-.508-.372l-.433-.008c-.15 0-.395.056-.601.28-.206.223-.788.771-.788 1.88 0 1.11.806 2.183.918 2.336.112.152 1.587 2.424 3.844 3.399.536.232.955.371 1.282.476.54.172 1.03.148 1.417.09.432-.065 1.329-.544 1.514-1.043.185-.5.185-.929.13-1.013-.056-.085-.206-.13-.518-.286z"/>
+      </svg>
+    </div>
+  </button>
 
   <!-- Script Dependencies -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -1232,6 +1391,33 @@
     let cart = {}; 
     let activeCategory = "drinks";
     let activeFilter = "all";
+
+    // Branch Selector Data Object (UPGRADE 1)
+    const branches = {
+      "Bangalore": [
+        { name: "Whitefield",      wa: "919739267702" },
+        { name: "HSR Layout",      wa: "919739267702" },
+        { name: "Jayanagar",       wa: "919739267702" },
+        { name: "Kalyan Nagar",    wa: "919739267702" },
+        { name: "Electronic City", wa: "919739267702" },
+        { name: "Kadugodi",        wa: "919739267702" },
+        { name: "RR Nagar",        wa: "919739267702" },
+        { name: "Rajajinagar",     wa: "919739267702" },
+        { name: "KR Puram",        wa: "919739267702" },
+        { name: "Yelahanka",       wa: "919739267702" },
+        { name: "Hennur",          wa: "919739267702" }
+      ],
+      "Mysore": [
+        { name: "Kalidasa Road",       wa: "919739267702" },
+        { name: "Sharda Devi Nagar",   wa: "919739267702" }
+      ],
+      "Hyderabad": [
+        { name: "Banjara Hills", wa: "919739267702" },
+        { name: "Hitex",         wa: "919739267702" }
+      ]
+    };
+
+    let selectedBranch = null;
 
     // Dynamic Menu Card rendering (Prevents overlaps of title & price on all viewports)
     function renderMenu() {
@@ -1450,9 +1636,14 @@
       }
     }
 
-    // Direct WhatsApp Invoice Sender (compiles every selected item and quantities!)
-    // Emojis are removed inside this dynamic message builder to completely prevent encoding '' issues on users' devices.
+    // Direct WhatsApp Invoice Sender with Branch Selector modal routing (UPGRADE 4)
     function sendOrderToWhatsApp() {
+      // If branch not yet selected, open modal first
+      if (!selectedBranch) {
+        openBranchModal();
+        return;
+      }
+
       let totalAmount = 0;
       let orderListText = "";
 
@@ -1471,9 +1662,9 @@
       const instruction = document.getElementById("cart-instruction").value.trim();
       const diningType = document.querySelector('input[name="order-type"]:checked').value;
 
-      // Premium Formatted Text Receipt (Web-safe, without high UTF-8 emojis that turn into  marks)
       let invoiceMsg = `*KAPOOR'S CAFE ONLINE ORDER*\n`;
       invoiceMsg += `----------------------------------\n`;
+      invoiceMsg += `*Branch:* ${selectedBranch.name}, ${selectedBranch.city}\n`;
       invoiceMsg += `*Order Type:* ${diningType}\n`;
       invoiceMsg += `----------------------------------\n`;
       invoiceMsg += `*Items Ordered:*\n${orderListText}\n`;
@@ -1486,9 +1677,91 @@
       invoiceMsg += `----------------------------------\n`;
       invoiceMsg += `Sent from Kapoor's Cafe Online Portal.\nPlease confirm my order!`;
 
-      // Redirect directly to WhatsApp with pre-filled message
-      const whatsappUrl = `https://wa.me/919739267702?text=${encodeURIComponent(invoiceMsg)}`;
+      const waNumber = selectedBranch.wa;
+      const whatsappUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(invoiceMsg)}`;
       window.open(whatsappUrl, "_blank");
+      
+      // Reset branch selection for next order
+      selectedBranch = null;
+    }
+
+    // Branch Modal JS Functions (UPGRADE 3 & FIX 2 / FIX 3)
+    let activeCityTab = "Bangalore";
+
+    function openBranchModal() {
+      const overlay = document.getElementById("branch-modal-overlay");
+      overlay.style.display = "flex";
+      overlay.classList.remove("hidden");
+      switchCityTab("Bangalore");
+    }
+
+    function closeBranchModal() {
+      const overlay = document.getElementById("branch-modal-overlay");
+      overlay.style.display = "none";
+      overlay.classList.add("hidden");
+    }
+
+    function switchCityTab(city) {
+      activeCityTab = city;
+      
+      // Update tab styles
+      document.querySelectorAll(".city-tab").forEach(tab => {
+        tab.className = tab.className
+          .replace("bg-saffron text-cream", "text-charcoal hover:bg-saffron/10");
+      });
+      const activeTab = document.getElementById("city-tab-" + city);
+      activeTab.classList.add("bg-saffron", "text-cream");
+      activeTab.classList.remove("text-charcoal", "hover:bg-saffron/10");
+      
+      // Render branch buttons
+      const list = document.getElementById("branch-list");
+      list.innerHTML = "";
+      branches[city].forEach(branch => {
+        const isSelected = selectedBranch && 
+          selectedBranch.name === branch.name && 
+          selectedBranch.city === city;
+        const btn = document.createElement("button");
+        btn.className = `branch-btn p-3 rounded-xl border-2 text-sm font-bold \
+          transition-all text-left ${isSelected 
+            ? "border-saffron bg-saffron/10 text-saffron" 
+            : "border-charcoal/20 bg-white text-charcoal hover:border-saffron"}`;
+        btn.innerHTML = `<span class="text-lg">📍</span><br>${branch.name}`;
+        btn.onclick = (e) => selectBranch(e, city, branch); // UPDATED (FIX 2)
+        list.appendChild(btn);
+      });
+    }
+
+    function selectBranch(e, city, branch) { // UPDATED (FIX 2)
+      selectedBranch = { ...branch, city };
+      
+      // Update button visuals - clean toggle (FIX 3)
+      document.querySelectorAll(".branch-btn").forEach(btn => {
+        btn.setAttribute("data-selected", "false");
+        btn.style.borderColor = "";
+        btn.style.backgroundColor = "";
+        btn.style.color = "";
+      });
+      e.currentTarget.setAttribute("data-selected", "true");
+      e.currentTarget.style.borderColor = "#FF6B00";
+      e.currentTarget.style.backgroundColor = "rgba(255,107,0,0.1)";
+      e.currentTarget.style.color = "#FF6B00";
+      
+      // Enable confirm button
+      const confirmBtn = document.getElementById("confirm-branch-btn");
+      confirmBtn.innerHTML = `
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Order from ${branch.name}, ${city}
+      `;
+      confirmBtn.classList.remove("opacity-50", "cursor-not-allowed");
+      confirmBtn.classList.add("hover:bg-emerald-600", "cursor-pointer");
+    }
+
+    function confirmBranchAndOrder() {
+      if (!selectedBranch) return;
+      closeBranchModal();
+      sendOrderToWhatsApp();
     }
 
     function switchTab(category) {
